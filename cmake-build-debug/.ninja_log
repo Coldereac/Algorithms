@@ -1,0 +1,10 @@
+# ninja log v6
+625	730	7477985488081772	Algorithms.exe	3a01f0202f721a66
+12	625	7477985481963793	CMakeFiles/Algorithms.dir/Prakt0/functions.cpp.obj	9ffeb8e1947c2112
+7	596	7477985481911616	CMakeFiles/Algorithms.dir/Prakt0/main.cpp.obj	c9721cdb6160f469
+8	576	7477985545524899	CMakeFiles/Algorithms.dir/Prakt0/main.cpp.obj	c9721cdb6160f469
+577	681	7477985551212889	Algorithms.exe	3a01f0202f721a66
+7	582	7477986100479684	CMakeFiles/Algorithms.dir/Prakt0/main.cpp.obj	c9721cdb6160f469
+583	688	7477986106232237	Algorithms.exe	3a01f0202f721a66
+6	555	7477986167979791	CMakeFiles/Algorithms.dir/Prakt0/main.cpp.obj	c9721cdb6160f469
+557	656	7477986173487611	Algorithms.exe	3a01f0202f721a66
