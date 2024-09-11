@@ -6,6 +6,33 @@
 
 using namespace std;
 
+// Функція для запису команди у бінарний файл
+void writeToFile(const Team *team, const char *filename) {
+    FILE *file;
+    if ((file = fopen(filename, "wb")) == NULL) {
+        perror("Error opening file");
+        return;
+    }
+    fwrite(&team->size, sizeof(int), 1, file);
+
+    fwrite(team->players, team->size * sizeof(Footballer), 1, file);
+    fclose(file);
+}
+
+// Функція для читання команди з бінарного файлу
+void readFromFile(Team *team, const char *filename) {
+    FILE *file = fopen(filename, "rb");
+    if (file == NULL) {
+        perror("Error opening file");
+        puts("New file will be created after first saving to file");
+        return;
+    }
+    fread(&team->size, sizeof(int), 1, file);
+    team->players = (Footballer *) malloc(team->size * sizeof(Footballer));
+    fread(team->players, team->size * sizeof(Footballer), 1, file);
+    fclose(file);
+}
+
 void addFootballer(Team *team, Footballer newFootballer) {
     if (team->players == NULL) {
         team->players = (Footballer *) malloc(sizeof(Footballer));
@@ -14,6 +41,7 @@ void addFootballer(Team *team, Footballer newFootballer) {
     }
     team->players[team->size] = newFootballer;
     team->size++;
+    writeToFile(team, "footballers.bin");
 }
 
 bool equals(const Footballer *a, const Footballer *b) {
@@ -61,37 +89,10 @@ void findLessThan5Games(Team *team, Team *result) {
 }
 
 void findBestForwarder(Team *team, Footballer *bestForwarder) {
-    bestForwarder->numberOfGoals = 0;
     for (int i = 0; i < team->size; ++i) {
         if (team->players[i].amplay == FORWARD && bestForwarder->numberOfGoals < team->players[i].numberOfGoals) {
-            bestForwarder = &team->players[i];
+            *bestForwarder = team->players[i];
         }
     }
 }
 
-// Функція для запису команди у бінарний файл
-void writeToFile(const Team *team, const char *filename) {
-    FILE *file;
-    if ((file = fopen(filename, "wb")) == NULL) {
-        perror("Error opening file");
-        return;
-    }
-    fwrite(&team->size, sizeof(int), 1, file);
-
-    fwrite(team->players, team->size * sizeof(Footballer), 1, file);
-    fclose(file);
-}
-
-// Функція для читання команди з бінарного файлу
-void readFromFile(Team *team, const char *filename) {
-    FILE *file = fopen(filename, "rb");
-    if (file == NULL) {
-        perror("Error opening file");
-        puts("New file will be created after first saving to file");
-        return;
-    }
-    fread(&team->size, sizeof(int), 1, file);
-    team->players = (Footballer *) malloc(team->size * sizeof(Footballer));
-    fread(team->players, team->size * sizeof(Footballer), 1, file);
-    fclose(file);
-}

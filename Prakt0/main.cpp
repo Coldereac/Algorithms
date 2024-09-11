@@ -2,15 +2,24 @@
 
 using namespace std;
 
-// Функція для додавання нового гравця
-
 int main() {
-    Team team{}; // Ініціалізація порожньої команди
-/*    Footballer first{"Ivan", FORWARD, 20, 20, 20};
-    addFootballer(&team, first);
-    addFootballer(&team, {"Johan", GOALKEEPER, 19, 3, 1});*/
+    Team team{};
     readFromFile(&team, "footballers.bin");
+    /*addFootballer(&team, {"Ivan", FORWARD, 20, 20, 20});
+    addFootballer(&team, {"Ivaw", FORWARD, 20, 20, 21});
+    addFootballer(&team, {"Johan", GOALKEEPER, 20, 3, 1});
+    addFootballer(&team, {"Han", GOALKEEPER, 20, 2, 1});*/
+    cout << "Team" << endl;
     printTeam(&team);
+    Footballer bestForward{};
+    findBestForwarder(&team, &bestForward);
+    cout << "Best Forward" << endl;
+    printFootballer(&bestForward);
+    cout << "Less than 5 games" << endl;
+    Team playersWithLessThan5Games{};
+    findLessThan5Games(&team, &playersWithLessThan5Games);
+    printTeam(&playersWithLessThan5Games);
     writeToFile(&team, "footballers.bin");
+    delete [] team.players;
     return 0;
 }

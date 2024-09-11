@@ -41,4 +41,6 @@ void findBestForwarder(Team *team, Footballer *bestForwarder);
 
 void printTeam(Team *team);
 
+void findLessThan5Games(Team *team, Team *result);
+
 #endif //ALGORITHMS_FUNCTIONS_H
