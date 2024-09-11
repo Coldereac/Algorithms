@@ -67,8 +67,9 @@ void deleteFootballer(Team *team, Footballer toDelete) {
 
 void printFootballer(Footballer *footballer) {
     cout << "Name: " << footballer->lastName <<
-         " Amplua: " << footballer->amplay <<
-         " Age: " << footballer->age <<
+         " Amplua: ";
+    outputAmplua(footballer->amplay);
+    cout << " Age: " << footballer->age <<
          " Number of games: " << footballer->numberOfGames <<
          " Number of goals: " << footballer->numberOfGoals << endl;
 }
@@ -93,6 +94,22 @@ void findBestForwarder(Team *team, Footballer *bestForwarder) {
         if (team->players[i].amplay == FORWARD && bestForwarder->numberOfGoals < team->players[i].numberOfGoals) {
             *bestForwarder = team->players[i];
         }
+    }
+}
+
+void outputAmplua(AmplayType amplayType) {
+    switch (amplayType) {
+        case 0:
+            cout << "Goalkeeper";
+            break;
+        case 1:
+            cout << "Defender";
+            break;
+        case 2:
+            cout << "Midfielder";
+            break;
+        case 3:
+            cout << "Forward";
     }
 }
 

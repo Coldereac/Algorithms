@@ -43,4 +43,6 @@ void printTeam(Team *team);
 
 void findLessThan5Games(Team *team, Team *result);
 
+void outputAmplua(AmplayType amplayType);
+
 #endif //ALGORITHMS_FUNCTIONS_H

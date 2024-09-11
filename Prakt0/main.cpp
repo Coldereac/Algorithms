@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     Team team{};
     readFromFile(&team, "footballers.bin");
-    /*addFootballer(&team, {"Ivan", FORWARD, 20, 20, 20});
+/*    addFootballer(&team, {"Ivan", FORWARD, 20, 20, 20});
     addFootballer(&team, {"Ivaw", FORWARD, 20, 20, 21});
     addFootballer(&team, {"Johan", GOALKEEPER, 20, 3, 1});
     addFootballer(&team, {"Han", GOALKEEPER, 20, 2, 1});*/
