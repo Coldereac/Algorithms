@@ -91,9 +91,9 @@ void deleteFootballer(PNode &head, Footballer toDelete) {
 }
 
 // Функція для запису списку у файл
-void writeToFile(PNode head, const char *filename) {
-    ofstream outFile(filename, ios::binary);
-    if (!outFile) {
+void writeToFile(PNode &head, const char *filename) {
+    FILE *outFile = fopen(filename, "wb"); // Відкриваємо файл для запису у бінарному форматі
+    if (outFile == NULL) {
         perror("Error opening file");
         return;
     }
@@ -101,41 +101,46 @@ void writeToFile(PNode head, const char *filename) {
     // Підраховуємо кількість елементів
     int size = 0;
     PNode temp = head;
-    while (temp != nullptr) {
+    while (temp != NULL) {
         size++;
         temp = temp->next;
     }
 
-    outFile.write(reinterpret_cast<const char *>(&size), sizeof(size));
+    // Записуємо кількість елементів у файл
+    fwrite(&size, sizeof(int), 1, outFile);
 
+    // Записуємо дані кожного футболіста у файл
     temp = head;
-    while (temp != nullptr) {
-        outFile.write(reinterpret_cast<const char *>(&temp->footballer), sizeof(Footballer));
+    while (temp != NULL) {
+        fwrite(&temp->footballer, sizeof(Footballer), 1, outFile);
         temp = temp->next;
     }
 
-    outFile.close();
+    fclose(outFile); // Закриваємо файл
 }
 
 // Функція для читання списку з файлу
 void readFromFile(PNode &head, const char *filename) {
-    ifstream inFile(filename, ios::binary);
-    if (!inFile) {
+    FILE *inFile = fopen(filename, "rb"); // Відкриваємо файл для читання у бінарному форматі
+    if (inFile == NULL) {
         perror("Error opening file");
         return;
     }
 
     int size = 0;
-    inFile.read(reinterpret_cast<char *>(&size), sizeof(size));
+    // Читаємо кількість елементів зі списку
+    fread(&size, sizeof(int), 1, inFile);
 
-    for (int i = 0; i < size; ++i) {
+    // Читаємо дані кожного футболіста і додаємо до списку
+    for (int i = 0; i < size; i++) {
         Footballer footballer{};
-        inFile.read(reinterpret_cast<char *>(&footballer), sizeof(Footballer));
-        addFootballer(head, footballer);
+        fread(&footballer, sizeof(Footballer), 1, inFile);
+        addFootballer(head, footballer); // Додаємо футболіста до списку
     }
 
-    inFile.close();
+    fclose(inFile); // Закриваємо файл
 }
+
 
 // Функція для виведення амплуа
 void outputAmplua(AmplayType amplayType) {
