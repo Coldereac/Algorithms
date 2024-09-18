@@ -69,44 +69,44 @@ include CMakeFiles/Algorithms.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Algorithms.dir/flags.make
 
-CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o: CMakeFiles/Algorithms.dir/flags.make
-CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o: /home/malinka/CLionProjects/Algorithms/Prakt1/1/main.cpp
-CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o: CMakeFiles/Algorithms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o -MF CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o.d -o CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o -c /home/malinka/CLionProjects/Algorithms/Prakt1/1/main.cpp
+CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o: CMakeFiles/Algorithms.dir/flags.make
+CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o: /home/malinka/CLionProjects/Algorithms/Prakt1/functions.cpp
+CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o: CMakeFiles/Algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o -MF CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o.d -o CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o -c /home/malinka/CLionProjects/Algorithms/Prakt1/functions.cpp
 
-CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malinka/CLionProjects/Algorithms/Prakt1/1/main.cpp > CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.i
+CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malinka/CLionProjects/Algorithms/Prakt1/functions.cpp > CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.i
 
-CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malinka/CLionProjects/Algorithms/Prakt1/1/main.cpp -o CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.s
+CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malinka/CLionProjects/Algorithms/Prakt1/functions.cpp -o CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.s
 
-CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o: CMakeFiles/Algorithms.dir/flags.make
-CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o: /home/malinka/CLionProjects/Algorithms/Prakt1/1/functions.cpp
-CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o: CMakeFiles/Algorithms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o -MF CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o.d -o CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o -c /home/malinka/CLionProjects/Algorithms/Prakt1/1/functions.cpp
+CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o: CMakeFiles/Algorithms.dir/flags.make
+CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o: /home/malinka/CLionProjects/Algorithms/Prakt1/2/main.cpp
+CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o: CMakeFiles/Algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o -MF CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o.d -o CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o -c /home/malinka/CLionProjects/Algorithms/Prakt1/2/main.cpp
 
-CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malinka/CLionProjects/Algorithms/Prakt1/1/functions.cpp > CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.i
+CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/malinka/CLionProjects/Algorithms/Prakt1/2/main.cpp > CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.i
 
-CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malinka/CLionProjects/Algorithms/Prakt1/1/functions.cpp -o CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.s
+CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/malinka/CLionProjects/Algorithms/Prakt1/2/main.cpp -o CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.s
 
 # Object files for target Algorithms
 Algorithms_OBJECTS = \
-"CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o" \
-"CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o"
+"CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o" \
+"CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o"
 
 # External object files for target Algorithms
 Algorithms_EXTERNAL_OBJECTS =
 
-Algorithms: CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o
-Algorithms: CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o
+Algorithms: CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o
+Algorithms: CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o
 Algorithms: CMakeFiles/Algorithms.dir/build.make
 Algorithms: CMakeFiles/Algorithms.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Algorithms"

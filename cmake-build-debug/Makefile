@@ -129,53 +129,53 @@ Algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/build
 .PHONY : Algorithms/fast
 
-Prakt1/1/functions.o: Prakt1/1/functions.cpp.o
-.PHONY : Prakt1/1/functions.o
+Prakt1/2/main.o: Prakt1/2/main.cpp.o
+.PHONY : Prakt1/2/main.o
 
 # target to build an object file
-Prakt1/1/functions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o
-.PHONY : Prakt1/1/functions.cpp.o
+Prakt1/2/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o
+.PHONY : Prakt1/2/main.cpp.o
 
-Prakt1/1/functions.i: Prakt1/1/functions.cpp.i
-.PHONY : Prakt1/1/functions.i
+Prakt1/2/main.i: Prakt1/2/main.cpp.i
+.PHONY : Prakt1/2/main.i
 
 # target to preprocess a source file
-Prakt1/1/functions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.i
-.PHONY : Prakt1/1/functions.cpp.i
+Prakt1/2/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.i
+.PHONY : Prakt1/2/main.cpp.i
 
-Prakt1/1/functions.s: Prakt1/1/functions.cpp.s
-.PHONY : Prakt1/1/functions.s
+Prakt1/2/main.s: Prakt1/2/main.cpp.s
+.PHONY : Prakt1/2/main.s
 
 # target to generate assembly for a file
-Prakt1/1/functions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.s
-.PHONY : Prakt1/1/functions.cpp.s
+Prakt1/2/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.s
+.PHONY : Prakt1/2/main.cpp.s
 
-Prakt1/1/main.o: Prakt1/1/main.cpp.o
-.PHONY : Prakt1/1/main.o
+Prakt1/functions.o: Prakt1/functions.cpp.o
+.PHONY : Prakt1/functions.o
 
 # target to build an object file
-Prakt1/1/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o
-.PHONY : Prakt1/1/main.cpp.o
+Prakt1/functions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o
+.PHONY : Prakt1/functions.cpp.o
 
-Prakt1/1/main.i: Prakt1/1/main.cpp.i
-.PHONY : Prakt1/1/main.i
+Prakt1/functions.i: Prakt1/functions.cpp.i
+.PHONY : Prakt1/functions.i
 
 # target to preprocess a source file
-Prakt1/1/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.i
-.PHONY : Prakt1/1/main.cpp.i
+Prakt1/functions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.i
+.PHONY : Prakt1/functions.cpp.i
 
-Prakt1/1/main.s: Prakt1/1/main.cpp.s
-.PHONY : Prakt1/1/main.s
+Prakt1/functions.s: Prakt1/functions.cpp.s
+.PHONY : Prakt1/functions.s
 
 # target to generate assembly for a file
-Prakt1/1/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.s
-.PHONY : Prakt1/1/main.cpp.s
+Prakt1/functions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.s
+.PHONY : Prakt1/functions.cpp.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Algorithms"
-	@echo "... Prakt1/1/functions.o"
-	@echo "... Prakt1/1/functions.i"
-	@echo "... Prakt1/1/functions.s"
-	@echo "... Prakt1/1/main.o"
-	@echo "... Prakt1/1/main.i"
-	@echo "... Prakt1/1/main.s"
+	@echo "... Prakt1/2/main.o"
+	@echo "... Prakt1/2/main.i"
+	@echo "... Prakt1/2/main.s"
+	@echo "... Prakt1/functions.o"
+	@echo "... Prakt1/functions.i"
+	@echo "... Prakt1/functions.s"
 .PHONY : help
 
 

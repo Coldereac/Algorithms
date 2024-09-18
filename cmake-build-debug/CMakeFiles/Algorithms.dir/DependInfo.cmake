@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/malinka/CLionProjects/Algorithms/Prakt1/1/functions.cpp" "CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o" "gcc" "CMakeFiles/Algorithms.dir/Prakt1/1/functions.cpp.o.d"
-  "/home/malinka/CLionProjects/Algorithms/Prakt1/1/main.cpp" "CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o" "gcc" "CMakeFiles/Algorithms.dir/Prakt1/1/main.cpp.o.d"
+  "/home/malinka/CLionProjects/Algorithms/Prakt1/2/main.cpp" "CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o" "gcc" "CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o.d"
+  "/home/malinka/CLionProjects/Algorithms/Prakt1/functions.cpp" "CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o" "gcc" "CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

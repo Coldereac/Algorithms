@@ -7,7 +7,8 @@ add_executable(Algorithms
 #        Prakt0/main.cpp
 #        Prakt0/functions.cpp
 #        Prakt0/functions.h
-        Prakt1/1/main.cpp
-        Prakt1/1/header.h
-        Prakt1/1/functions.cpp
+        Prakt1/header.h
+        Prakt1/functions.cpp
+#        Prakt1/1/main.cpp
+        Prakt1/2/main.cpp
 )
