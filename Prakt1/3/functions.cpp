@@ -91,7 +91,7 @@ void deleteFootballer(PNode &head, Footballer toDelete) {
 }
 
 // Функція для запису списку у файл
-void writeToFile(PNode &head, const char *filename) {
+void writeToFile(PNode head, const char *filename) {
     FILE *outFile = fopen(filename, "wb"); // Відкриваємо файл для запису у бінарному форматі
     if (outFile == NULL) {
         perror("Error opening file");

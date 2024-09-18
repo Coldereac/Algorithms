@@ -36,7 +36,7 @@ typedef Node *PNode; // Тип для зручного використання 
 void printFootballer(Footballer *footballer);
 
 // Запис списку футболістів у файл
-void writeToFile(PNode &head, const char *filename);
+void writeToFile(PNode head, const char *filename);
 
 // Читання списку футболістів з файлу
 void readFromFile(PNode &head, const char *filename);
