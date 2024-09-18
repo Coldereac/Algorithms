@@ -46,7 +46,7 @@ void addFootballer(Team *team, Footballer newFootballer) {
 
 bool equals(const Footballer *a, const Footballer *b) {
     return strcmp(a->lastName, b->lastName) == 0 && a->amplay == b->amplay && a->age == b->age &&
-           a->numberOfGoals == b->numberOfGoals && a->numberOfGames == b->numberOfGames;
+           a->goals == b->goals && a->games == b->games;
 }
 
 void deleteFootballer(Team *team, Footballer toDelete) {
@@ -67,11 +67,11 @@ void deleteFootballer(Team *team, Footballer toDelete) {
 
 void printFootballer(Footballer *footballer) {
     cout << "Name: " << footballer->lastName <<
-         " Amplua: ";
+            " Amplua: ";
     outputAmplua(footballer->amplay);
     cout << " Age: " << footballer->age <<
-         " Number of games: " << footballer->numberOfGames <<
-         " Number of goals: " << footballer->numberOfGoals << endl;
+            " Number of games: " << footballer->games <<
+            " Number of goals: " << footballer->goals << endl;
 }
 
 void printTeam(Team *team) {
@@ -81,9 +81,9 @@ void printTeam(Team *team) {
     }
 }
 
-void findLessThan5Games(Team *team, Team *result) {
+void findLess5Games(Team *team, Team *result) {
     for (int i = 0; i < team->size; ++i) {
-        if (team->players[i].numberOfGames < 5) {
+        if (team->players[i].games < 5) {
             addFootballer(result, team->players[i]);
         }
     }
@@ -91,7 +91,7 @@ void findLessThan5Games(Team *team, Team *result) {
 
 void findBestForwarder(Team *team, Footballer *bestForwarder) {
     for (int i = 0; i < team->size; ++i) {
-        if (team->players[i].amplay == FORWARD && bestForwarder->numberOfGoals < team->players[i].numberOfGoals) {
+        if (team->players[i].amplay == FORWARD && bestForwarder->goals < team->players[i].goals) {
             *bestForwarder = team->players[i];
         }
     }
@@ -112,4 +112,3 @@ void outputAmplua(AmplayType amplayType) {
             cout << "Forward";
     }
 }
-

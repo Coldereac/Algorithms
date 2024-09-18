@@ -11,16 +11,16 @@
 
 using namespace std;
 
-typedef enum {
+enum AmplayType {
     GOALKEEPER, DEFENDER, MIDFIELDER, FORWARD
-} AmplayType;
+};
 
 struct Footballer {
     char lastName[50];
     AmplayType amplay;
     int age;
-    int numberOfGames;
-    int numberOfGoals;
+    int games;
+    int goals;
 };
 
 
@@ -41,8 +41,10 @@ void findBestForwarder(Team *team, Footballer *bestForwarder);
 
 void printTeam(Team *team);
 
-void findLessThan5Games(Team *team, Team *result);
+void findLess5Games(Team *team, Team *result);
 
 void outputAmplua(AmplayType amplayType);
+
+void deleteFootballer(Team *team, Footballer toDelete);
 
 #endif //ALGORITHMS_FUNCTIONS_H
