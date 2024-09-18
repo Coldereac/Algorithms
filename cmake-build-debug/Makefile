@@ -117,65 +117,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Algorithms
+# Target rules for targets named Prakt0
 
 # Build rule for target.
-Algorithms: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algorithms
-.PHONY : Algorithms
+Prakt0: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt0
+.PHONY : Prakt0
 
 # fast build rule for target.
-Algorithms/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/build
-.PHONY : Algorithms/fast
+Prakt0/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt0/CMakeFiles/Prakt0.dir/build.make Prakt0/CMakeFiles/Prakt0.dir/build
+.PHONY : Prakt0/fast
 
-Prakt1/3/functions.o: Prakt1/3/functions.cpp.o
-.PHONY : Prakt1/3/functions.o
+#=============================================================================
+# Target rules for targets named Prakt1_1
 
-# target to build an object file
-Prakt1/3/functions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/3/functions.cpp.o
-.PHONY : Prakt1/3/functions.cpp.o
+# Build rule for target.
+Prakt1_1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt1_1
+.PHONY : Prakt1_1
 
-Prakt1/3/functions.i: Prakt1/3/functions.cpp.i
-.PHONY : Prakt1/3/functions.i
+# fast build rule for target.
+Prakt1_1/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt1/1/CMakeFiles/Prakt1_1.dir/build.make Prakt1/1/CMakeFiles/Prakt1_1.dir/build
+.PHONY : Prakt1_1/fast
 
-# target to preprocess a source file
-Prakt1/3/functions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/3/functions.cpp.i
-.PHONY : Prakt1/3/functions.cpp.i
+#=============================================================================
+# Target rules for targets named Prakt1_2
 
-Prakt1/3/functions.s: Prakt1/3/functions.cpp.s
-.PHONY : Prakt1/3/functions.s
+# Build rule for target.
+Prakt1_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt1_2
+.PHONY : Prakt1_2
 
-# target to generate assembly for a file
-Prakt1/3/functions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/3/functions.cpp.s
-.PHONY : Prakt1/3/functions.cpp.s
+# fast build rule for target.
+Prakt1_2/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt1/2/CMakeFiles/Prakt1_2.dir/build.make Prakt1/2/CMakeFiles/Prakt1_2.dir/build
+.PHONY : Prakt1_2/fast
 
-Prakt1/3/main.o: Prakt1/3/main.cpp.o
-.PHONY : Prakt1/3/main.o
+#=============================================================================
+# Target rules for targets named Prakt1_3
 
-# target to build an object file
-Prakt1/3/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/3/main.cpp.o
-.PHONY : Prakt1/3/main.cpp.o
+# Build rule for target.
+Prakt1_3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt1_3
+.PHONY : Prakt1_3
 
-Prakt1/3/main.i: Prakt1/3/main.cpp.i
-.PHONY : Prakt1/3/main.i
-
-# target to preprocess a source file
-Prakt1/3/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/3/main.cpp.i
-.PHONY : Prakt1/3/main.cpp.i
-
-Prakt1/3/main.s: Prakt1/3/main.cpp.s
-.PHONY : Prakt1/3/main.s
-
-# target to generate assembly for a file
-Prakt1/3/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Algorithms.dir/build.make CMakeFiles/Algorithms.dir/Prakt1/3/main.cpp.s
-.PHONY : Prakt1/3/main.cpp.s
+# fast build rule for target.
+Prakt1_3/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt1/3/CMakeFiles/Prakt1_3.dir/build.make Prakt1/3/CMakeFiles/Prakt1_3.dir/build
+.PHONY : Prakt1_3/fast
 
 # Help Target
 help:
@@ -185,13 +176,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Algorithms"
-	@echo "... Prakt1/3/functions.o"
-	@echo "... Prakt1/3/functions.i"
-	@echo "... Prakt1/3/functions.s"
-	@echo "... Prakt1/3/main.o"
-	@echo "... Prakt1/3/main.i"
-	@echo "... Prakt1/3/main.s"
+	@echo "... Prakt0"
+	@echo "... Prakt1_1"
+	@echo "... Prakt1_2"
+	@echo "... Prakt1_3"
 .PHONY : help
 
 

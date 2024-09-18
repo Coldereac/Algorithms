@@ -26,6 +26,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/malinka/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux.cmake"
   "/home/malinka/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/UnixPaths.cmake"
   "/home/malinka/CLionProjects/Algorithms/CMakeLists.txt"
+  "/home/malinka/CLionProjects/Algorithms/Prakt0/CMakeLists.txt"
+  "/home/malinka/CLionProjects/Algorithms/Prakt1/1/CMakeLists.txt"
+  "/home/malinka/CLionProjects/Algorithms/Prakt1/2/CMakeLists.txt"
+  "/home/malinka/CLionProjects/Algorithms/Prakt1/3/CMakeLists.txt"
   "CMakeFiles/3.29.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.6/CMakeSystem.cmake"
@@ -40,9 +44,16 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Prakt0/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Prakt1/1/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Prakt1/2/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Prakt1/3/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Algorithms.dir/DependInfo.cmake"
+  "Prakt0/CMakeFiles/Prakt0.dir/DependInfo.cmake"
+  "Prakt1/1/CMakeFiles/Prakt1_1.dir/DependInfo.cmake"
+  "Prakt1/2/CMakeFiles/Prakt1_2.dir/DependInfo.cmake"
+  "Prakt1/3/CMakeFiles/Prakt1_3.dir/DependInfo.cmake"
   )

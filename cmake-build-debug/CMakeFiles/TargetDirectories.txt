@@ -1,3 +1,14 @@
-/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles/Algorithms.dir
 /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt0/CMakeFiles/Prakt0.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt0/CMakeFiles/edit_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt0/CMakeFiles/rebuild_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/1/CMakeFiles/Prakt1_1.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/1/CMakeFiles/edit_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/1/CMakeFiles/rebuild_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/2/CMakeFiles/Prakt1_2.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/2/CMakeFiles/edit_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/2/CMakeFiles/rebuild_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/3/CMakeFiles/Prakt1_3.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/3/CMakeFiles/edit_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/3/CMakeFiles/rebuild_cache.dir

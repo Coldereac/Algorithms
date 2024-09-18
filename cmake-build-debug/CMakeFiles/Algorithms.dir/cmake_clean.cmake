@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "Algorithms"
   "Algorithms.pdb"
-  "CMakeFiles/Algorithms.dir/Prakt1/3/functions.cpp.o"
-  "CMakeFiles/Algorithms.dir/Prakt1/3/functions.cpp.o.d"
-  "CMakeFiles/Algorithms.dir/Prakt1/3/main.cpp.o"
-  "CMakeFiles/Algorithms.dir/Prakt1/3/main.cpp.o.d"
+  "CMakeFiles/Algorithms.dir/Prakt0/functions.cpp.o"
+  "CMakeFiles/Algorithms.dir/Prakt0/functions.cpp.o.d"
+  "CMakeFiles/Algorithms.dir/Prakt0/main.cpp.o"
+  "CMakeFiles/Algorithms.dir/Prakt0/main.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
