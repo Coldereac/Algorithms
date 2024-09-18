@@ -9,6 +9,8 @@
 #include <iostream>
 #include <string>
 
+#define FILEPATH "../Prakt0/footballers.bin"
+
 using namespace std;
 
 enum AmplayType {

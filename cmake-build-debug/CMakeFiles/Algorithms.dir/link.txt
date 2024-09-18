@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/Algorithms.dir/Prakt1/functions.cpp.o CMakeFiles/Algorithms.dir/Prakt1/2/main.cpp.o -o Algorithms
+/usr/bin/c++ -g CMakeFiles/Algorithms.dir/Prakt1/3/functions.cpp.o CMakeFiles/Algorithms.dir/Prakt1/3/main.cpp.o -o Algorithms

@@ -1,0 +1,49 @@
+#include "functions.h"
+
+using namespace std;
+
+int main() {
+    PNode head = nullptr;
+
+    readFromFile(head, FILEPATH); // Завантажуємо дані з файлу
+
+    int choice;
+    do {
+        printMenu();
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                addFootballerMenu(head);
+                break;
+            case 2:
+                deleteFootballerMenu(head);
+                break;
+            case 3:
+                cout << "Team:" << endl;
+                printTeam(head);
+                break;
+            case 4:
+                findBestForwardMenu(head);
+                break;
+            case 5:
+                findLess5GamesMenu(head);
+                break;
+            case 6:
+                cout << "Exiting program..." << endl;
+                break;
+            default:
+                cout << "Invalid choice, please try again." << endl;
+        }
+    } while (choice != 6);
+
+    // Звільняємо пам'ять
+    PNode current = head;
+    while (current != nullptr) {
+        Node *next = current->next;
+        delete current;
+        current = next;
+    }
+
+    return 0;
+}

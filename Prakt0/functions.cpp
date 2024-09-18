@@ -41,7 +41,7 @@ void addFootballer(Team *team, Footballer newFootballer) {
     }
     team->players[team->size] = newFootballer;
     team->size++;
-    writeToFile(team, "footballers.bin");
+    writeToFile(team, FILEPATH);
 }
 
 bool equals(const Footballer *a, const Footballer *b) {
