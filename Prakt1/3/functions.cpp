@@ -57,7 +57,7 @@ void findBestForwarder(PNode head, Footballer *bestForwarder) {
 }
 
 // Функція для пошуку футболістів з менше ніж 5 матчами
-void findLess5Games(PNode head, Node *&result) {
+void findLess5Games(PNode head, PNode &result) {
     PNode temp = head;
     while (temp != nullptr) {
         if (temp->footballer.games < 5) {

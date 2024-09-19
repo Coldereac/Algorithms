@@ -6,6 +6,7 @@ using namespace std;
 pnode formLIFO_1() {
     int info;
     pnode head = NULL, cur;
+    printf("Enter numbers in list(end with 0): ");
     cin >> info; // Введення значення
     while (info) {
         // Поки введене значення не 0
@@ -23,6 +24,7 @@ void formLIFO_2(pnode *head) {
     int info;
     pnode cur;
     *head = NULL; // Ініціалізація вершини
+    printf("Enter numbers in list(end with 0): ");
     cin >> info;
     while (info) {
         cur = new tnode; // Створення нового елемента
@@ -34,7 +36,7 @@ void formLIFO_2(pnode *head) {
 }
 
 
-void display(pnode &node) {
+void display(pnode node) {
     pnode cur = node;
     while (cur != NULL) {
         // Поки не кінець списку
@@ -47,6 +49,7 @@ void display(pnode &node) {
 pnode formFIFO() {
     pnode tail = NULL, head = NULL; // Ініціалізуємо вказівники на голову і хвіст списку
     int info;
+    printf("Enter numbers in list(end with 0): ");
     while (cin >> info && info) { // Читаємо значення, поки не введено 0
         pnode cur = new tnode; // Створюємо новий елемент списку
         cur->info = info; // Записуємо введене значення
