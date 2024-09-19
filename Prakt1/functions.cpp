@@ -34,7 +34,7 @@ void formLIFO_2(pnode *head) {
 }
 
 
-void display(pnode node) {
+void display(pnode &node) {
     pnode cur = node;
     while (cur != NULL) {
         // Поки не кінець списку

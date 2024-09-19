@@ -12,4 +12,4 @@ set(CMAKE_CXX_STANDARD 20)
 
 
 # Add tasks subprojects
-add_executable(Prakt1_3 main.cpp)
+add_executable(Prakt1_3 main.cpp functions.cpp functions.h)

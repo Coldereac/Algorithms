@@ -94,7 +94,6 @@ void deleteFootballer(PNode &head, Footballer toDelete) {
 void writeToFile(PNode head, const char *filename) {
     FILE *outFile = fopen(filename, "wb"); // Відкриваємо файл для запису у бінарному форматі
     if (outFile == NULL) {
-        perror("Error opening file");
         return;
     }
 
@@ -123,7 +122,6 @@ void writeToFile(PNode head, const char *filename) {
 void readFromFile(PNode &head, const char *filename) {
     FILE *inFile = fopen(filename, "rb"); // Відкриваємо файл для читання у бінарному форматі
     if (inFile == NULL) {
-        perror("Error opening file");
         return;
     }
 
@@ -220,6 +218,14 @@ void deleteFootballerMenu(PNode &head) {
     writeToFile(head, FILEPATH); // Зберігаємо зміни у файл
 }
 
+void freeMemory(PNode &node) {
+    while (node != nullptr) {
+        PNode temp = node;
+        node = node->next;
+        delete temp;
+    }
+}
+
 void findBestForwardMenu(PNode head) {
     Footballer bestForward{};
     findBestForwarder(head, &bestForward);
@@ -245,9 +251,10 @@ void findLess5GamesMenu(PNode head) {
     }
 
     // Очищаємо список з результатами
-    while (playersWithLessThan5Games != nullptr) {
-        PNode temp = playersWithLessThan5Games;
-        playersWithLessThan5Games = playersWithLessThan5Games->next;
-        delete temp;
-    }
+    // while (playersWithLessThan5Games != nullptr) {
+    //     PNode temp = playersWithLessThan5Games;
+    //     playersWithLessThan5Games = playersWithLessThan5Games->next;
+    //     delete temp;
+    // }
+    freeMemory(playersWithLessThan5Games);
 }

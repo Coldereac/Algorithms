@@ -38,12 +38,13 @@ int main() {
     } while (choice != 6);
 
     // Звільняємо пам'ять
-    PNode current = head;
-    while (current != nullptr) {
-        Node *next = current->next;
-        delete current;
-        current = next;
-    }
+    // PNode current = head;
+    // while (current != nullptr) {
+    //     Node *next = current->next;
+    //     delete current;
+    //     current = next;
+    // }
+    freeMemory(head);
 
     return 0;
 }

@@ -1,9 +1,18 @@
 #ifndef ALGORITHMS_FUNCTIONS_H
 #define ALGORITHMS_FUNCTIONS_H
 
+/*
+*Створіть список структур Футболіст (структура, яка створена в 1
+практичній).
+Реалізуйте функції:
+визначити кращого форварда і вивести інформацію про нього;
+вивести відомості про футболістів, які зіграли не менше 5-ти
+ігор.
+ */
+
 #include <iostream>
 
-#define FILEPATH "../Prakt1/3/footballers.bin" // Шлях до файлу для збереження даних про футболістів
+#define FILEPATH "footballers.bin" // Шлях до файлу для збереження даних про футболістів
 
 using namespace std;
 
@@ -73,5 +82,8 @@ void findBestForwardMenu(PNode head);
 
 // Меню для пошуку футболістів з менше ніж 5 зіграними матчами
 void findLess5GamesMenu(PNode head);
+
+//Вивільнення пам'яті
+void freeMemory(PNode &node);
 
 #endif // ALGORITHMS_FUNCTIONS_H

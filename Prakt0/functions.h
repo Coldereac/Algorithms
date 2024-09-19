@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 
-#define FILEPATH "../Prakt0/footballers.bin"
+#define FILEPATH "footballers.bin"
 
 using namespace std;
 
