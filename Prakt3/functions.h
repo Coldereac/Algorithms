@@ -104,7 +104,13 @@ void insertBeforeMenu(PNode *head);
 // Вставка нового елемента після заданим
 void insertBefore(PNode *head, Footballer newFootballer, Footballer targetFootballer);
 
-//Збирання інформації про нового футболіста
+// Збирання інформації про нового футболіста
 Footballer createFootballer();
+
+// Меню для знаходження футболіста по його параметрам
+void findFootballerMenu(PNode head);
+
+// Пошук елемента з заданими властивостями
+PNode findFootballer(PNode head, Footballer targetFootballer);
 
 #endif // ALGORITHMS_FUNCTIONS_H

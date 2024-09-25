@@ -35,6 +35,9 @@ int main() {
             case 7:
                 insertAfterMenu(&head);
                 break;
+            case 8:
+                findFootballerMenu(head);
+                break;
             case 0:
                 cout << "Exiting program..." << endl;
                 break;

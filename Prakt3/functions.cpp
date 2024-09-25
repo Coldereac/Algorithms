@@ -178,6 +178,7 @@ void printMenu() {
     cout << "5. Find Footballers with Less Than 5 Games" << endl;
     cout << "6. Insert Footballer before" << endl;
     cout << "7. Insert Footballer after" << endl;
+    cout << "8. Find Footballer by params" << endl;
     cout << "0. Exit" << endl;
     cout << "Enter your choice: ";
 }
@@ -358,4 +359,25 @@ PNode findFootballer(PNode head, Footballer targetFootballer) {
         temp = temp->next;
     }
     return founded;
+}
+
+void findFootballerMenu(PNode head) {
+    Footballer targetFootballer{};
+    cout << "Enter footballer's last name: ";
+    cin >> targetFootballer.lastName;
+
+    cout << "Enter footballer's amplua (0 - Goalkeeper, 1 - Defender, 2 - Midfielder, 3 - Forward): ";
+    int ampluaChoice;
+    cin >> ampluaChoice;
+    targetFootballer.amplay = AmplayType(ampluaChoice);
+
+    cout << "Enter footballer's age: ";
+    cin >> targetFootballer.age;
+
+    cout << "Enter number of games played: ";
+    cin >> targetFootballer.games;
+
+    cout << "Enter number of goals scored: ";
+    cin >> targetFootballer.goals;
+    printFootballer(&findFootballer(head, targetFootballer)->footballer);
 }
