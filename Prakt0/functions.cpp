@@ -44,16 +44,16 @@ void addFootballer(Team *team, Footballer newFootballer) {
     writeToFile(team, FILEPATH);
 }
 
-bool equals(const Footballer *a, const Footballer *b) {
-    return strcmp(a->lastName, b->lastName) == 0 && a->amplay == b->amplay && a->age == b->age &&
-           a->goals == b->goals && a->games == b->games;
+bool equals(const Footballer &a, const Footballer &b) {
+    return strcmp(a.lastName, b.lastName) == 0 && a.amplay == b.amplay && a.age == b.age &&
+           a.goals == b.goals && a.games == b.games;
 }
 
 void deleteFootballer(Team *team, Footballer toDelete) {
     int start = -1;
     int i = 0;
     while (i < team->size && start == -1) {
-        if (equals(&team->players[i], &toDelete)) {
+        if (equals(team->players[i], toDelete)) {
             start = i;
         }
         i++;

@@ -21,9 +21,9 @@ void addFootballer(PNode &head, Footballer newFootballer) {
 }
 
 // Функція порівняння двох футболістів
-bool equals(const Footballer *a, const Footballer *b) {
-    return strcmp(a->lastName, b->lastName) == 0 && a->amplay == b->amplay && a->age == b->age &&
-           a->goals == b->goals && a->games == b->games;
+bool equals(const Footballer &a, const Footballer &b) {
+    return strcmp(a.lastName, b.lastName) == 0 && a.amplay == b.amplay && a.age == b.age &&
+           a.goals == b.goals && a.games == b.games;
 }
 
 // Функція для виведення інформації про футболіста
@@ -72,7 +72,7 @@ void deleteFootballer(PNode &head, Footballer toDelete) {
     PNode temp = head;
     PNode prev = nullptr;
 
-    while (temp != nullptr && !equals(&temp->footballer, &toDelete)) {
+    while (temp != nullptr && !equals(temp->footballer, toDelete)) {
         prev = temp;
         temp = temp->next;
     }
