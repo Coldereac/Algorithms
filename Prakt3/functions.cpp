@@ -384,6 +384,6 @@ void findFootballerMenu(PNode head) {
         printFootballer(&founded->footballer);
     }
     else {
-        cout << "Footballer not found";
+        cout << "Footballer not found" << endl;
     }
 }
