@@ -64,23 +64,26 @@ CMAKE_BINARY_DIR = /home/malinka/CLionProjects/Algorithms/cmake-build-debug
 
 # The main recursive "all" target.
 all: Prakt0/all
-all: Prakt1/1/all
-all: Prakt1/2/all
-all: Prakt1/3/all
+all: Prakt2/1/all
+all: Prakt2/2/all
+all: Prakt2/3/all
+all: Prakt3/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: Prakt0/preinstall
-preinstall: Prakt1/1/preinstall
-preinstall: Prakt1/2/preinstall
-preinstall: Prakt1/3/preinstall
+preinstall: Prakt2/1/preinstall
+preinstall: Prakt2/2/preinstall
+preinstall: Prakt2/3/preinstall
+preinstall: Prakt3/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: Prakt0/clean
-clean: Prakt1/1/clean
-clean: Prakt1/2/clean
-clean: Prakt1/3/clean
+clean: Prakt2/1/clean
+clean: Prakt2/2/clean
+clean: Prakt2/3/clean
+clean: Prakt3/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,49 +102,64 @@ Prakt0/clean: Prakt0/CMakeFiles/Prakt0.dir/clean
 .PHONY : Prakt0/clean
 
 #=============================================================================
-# Directory level rules for directory Prakt1/1
+# Directory level rules for directory Prakt2/1
 
 # Recursive "all" directory target.
-Prakt1/1/all: Prakt1/1/CMakeFiles/Prakt1_1.dir/all
-.PHONY : Prakt1/1/all
+Prakt2/1/all: Prakt2/1/CMakeFiles/Prakt2_1.dir/all
+.PHONY : Prakt2/1/all
 
 # Recursive "preinstall" directory target.
-Prakt1/1/preinstall:
-.PHONY : Prakt1/1/preinstall
+Prakt2/1/preinstall:
+.PHONY : Prakt2/1/preinstall
 
 # Recursive "clean" directory target.
-Prakt1/1/clean: Prakt1/1/CMakeFiles/Prakt1_1.dir/clean
-.PHONY : Prakt1/1/clean
+Prakt2/1/clean: Prakt2/1/CMakeFiles/Prakt2_1.dir/clean
+.PHONY : Prakt2/1/clean
 
 #=============================================================================
-# Directory level rules for directory Prakt1/2
+# Directory level rules for directory Prakt2/2
 
 # Recursive "all" directory target.
-Prakt1/2/all: Prakt1/2/CMakeFiles/Prakt1_2.dir/all
-.PHONY : Prakt1/2/all
+Prakt2/2/all: Prakt2/2/CMakeFiles/Prakt2_2.dir/all
+.PHONY : Prakt2/2/all
 
 # Recursive "preinstall" directory target.
-Prakt1/2/preinstall:
-.PHONY : Prakt1/2/preinstall
+Prakt2/2/preinstall:
+.PHONY : Prakt2/2/preinstall
 
 # Recursive "clean" directory target.
-Prakt1/2/clean: Prakt1/2/CMakeFiles/Prakt1_2.dir/clean
-.PHONY : Prakt1/2/clean
+Prakt2/2/clean: Prakt2/2/CMakeFiles/Prakt2_2.dir/clean
+.PHONY : Prakt2/2/clean
 
 #=============================================================================
-# Directory level rules for directory Prakt1/3
+# Directory level rules for directory Prakt2/3
 
 # Recursive "all" directory target.
-Prakt1/3/all: Prakt1/3/CMakeFiles/Prakt1_3.dir/all
-.PHONY : Prakt1/3/all
+Prakt2/3/all: Prakt2/3/CMakeFiles/Prakt2_3.dir/all
+.PHONY : Prakt2/3/all
 
 # Recursive "preinstall" directory target.
-Prakt1/3/preinstall:
-.PHONY : Prakt1/3/preinstall
+Prakt2/3/preinstall:
+.PHONY : Prakt2/3/preinstall
 
 # Recursive "clean" directory target.
-Prakt1/3/clean: Prakt1/3/CMakeFiles/Prakt1_3.dir/clean
-.PHONY : Prakt1/3/clean
+Prakt2/3/clean: Prakt2/3/CMakeFiles/Prakt2_3.dir/clean
+.PHONY : Prakt2/3/clean
+
+#=============================================================================
+# Directory level rules for directory Prakt3
+
+# Recursive "all" directory target.
+Prakt3/all: Prakt3/CMakeFiles/Prakt3.dir/all
+.PHONY : Prakt3/all
+
+# Recursive "preinstall" directory target.
+Prakt3/preinstall:
+.PHONY : Prakt3/preinstall
+
+# Recursive "clean" directory target.
+Prakt3/clean: Prakt3/CMakeFiles/Prakt3.dir/clean
+.PHONY : Prakt3/clean
 
 #=============================================================================
 # Target rules for target Prakt0/CMakeFiles/Prakt0.dir
@@ -170,82 +188,108 @@ Prakt0/CMakeFiles/Prakt0.dir/clean:
 .PHONY : Prakt0/CMakeFiles/Prakt0.dir/clean
 
 #=============================================================================
-# Target rules for target Prakt1/1/CMakeFiles/Prakt1_1.dir
+# Target rules for target Prakt2/1/CMakeFiles/Prakt2_1.dir
 
 # All Build rule for target.
-Prakt1/1/CMakeFiles/Prakt1_1.dir/all:
-	$(MAKE) $(MAKESILENT) -f Prakt1/1/CMakeFiles/Prakt1_1.dir/build.make Prakt1/1/CMakeFiles/Prakt1_1.dir/depend
-	$(MAKE) $(MAKESILENT) -f Prakt1/1/CMakeFiles/Prakt1_1.dir/build.make Prakt1/1/CMakeFiles/Prakt1_1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target Prakt1_1"
-.PHONY : Prakt1/1/CMakeFiles/Prakt1_1.dir/all
+Prakt2/1/CMakeFiles/Prakt2_1.dir/all:
+	$(MAKE) $(MAKESILENT) -f Prakt2/1/CMakeFiles/Prakt2_1.dir/build.make Prakt2/1/CMakeFiles/Prakt2_1.dir/depend
+	$(MAKE) $(MAKESILENT) -f Prakt2/1/CMakeFiles/Prakt2_1.dir/build.make Prakt2/1/CMakeFiles/Prakt2_1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target Prakt2_1"
+.PHONY : Prakt2/1/CMakeFiles/Prakt2_1.dir/all
 
 # Build rule for subdir invocation for target.
-Prakt1/1/CMakeFiles/Prakt1_1.dir/rule: cmake_check_build_system
+Prakt2/1/CMakeFiles/Prakt2_1.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt1/1/CMakeFiles/Prakt1_1.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt2/1/CMakeFiles/Prakt2_1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 0
-.PHONY : Prakt1/1/CMakeFiles/Prakt1_1.dir/rule
+.PHONY : Prakt2/1/CMakeFiles/Prakt2_1.dir/rule
 
 # Convenience name for target.
-Prakt1_1: Prakt1/1/CMakeFiles/Prakt1_1.dir/rule
-.PHONY : Prakt1_1
+Prakt2_1: Prakt2/1/CMakeFiles/Prakt2_1.dir/rule
+.PHONY : Prakt2_1
 
 # clean rule for target.
-Prakt1/1/CMakeFiles/Prakt1_1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Prakt1/1/CMakeFiles/Prakt1_1.dir/build.make Prakt1/1/CMakeFiles/Prakt1_1.dir/clean
-.PHONY : Prakt1/1/CMakeFiles/Prakt1_1.dir/clean
+Prakt2/1/CMakeFiles/Prakt2_1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Prakt2/1/CMakeFiles/Prakt2_1.dir/build.make Prakt2/1/CMakeFiles/Prakt2_1.dir/clean
+.PHONY : Prakt2/1/CMakeFiles/Prakt2_1.dir/clean
 
 #=============================================================================
-# Target rules for target Prakt1/2/CMakeFiles/Prakt1_2.dir
+# Target rules for target Prakt2/2/CMakeFiles/Prakt2_2.dir
 
 # All Build rule for target.
-Prakt1/2/CMakeFiles/Prakt1_2.dir/all:
-	$(MAKE) $(MAKESILENT) -f Prakt1/2/CMakeFiles/Prakt1_2.dir/build.make Prakt1/2/CMakeFiles/Prakt1_2.dir/depend
-	$(MAKE) $(MAKESILENT) -f Prakt1/2/CMakeFiles/Prakt1_2.dir/build.make Prakt1/2/CMakeFiles/Prakt1_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target Prakt1_2"
-.PHONY : Prakt1/2/CMakeFiles/Prakt1_2.dir/all
+Prakt2/2/CMakeFiles/Prakt2_2.dir/all:
+	$(MAKE) $(MAKESILENT) -f Prakt2/2/CMakeFiles/Prakt2_2.dir/build.make Prakt2/2/CMakeFiles/Prakt2_2.dir/depend
+	$(MAKE) $(MAKESILENT) -f Prakt2/2/CMakeFiles/Prakt2_2.dir/build.make Prakt2/2/CMakeFiles/Prakt2_2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target Prakt2_2"
+.PHONY : Prakt2/2/CMakeFiles/Prakt2_2.dir/all
 
 # Build rule for subdir invocation for target.
-Prakt1/2/CMakeFiles/Prakt1_2.dir/rule: cmake_check_build_system
+Prakt2/2/CMakeFiles/Prakt2_2.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt1/2/CMakeFiles/Prakt1_2.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt2/2/CMakeFiles/Prakt2_2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 0
-.PHONY : Prakt1/2/CMakeFiles/Prakt1_2.dir/rule
+.PHONY : Prakt2/2/CMakeFiles/Prakt2_2.dir/rule
 
 # Convenience name for target.
-Prakt1_2: Prakt1/2/CMakeFiles/Prakt1_2.dir/rule
-.PHONY : Prakt1_2
+Prakt2_2: Prakt2/2/CMakeFiles/Prakt2_2.dir/rule
+.PHONY : Prakt2_2
 
 # clean rule for target.
-Prakt1/2/CMakeFiles/Prakt1_2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Prakt1/2/CMakeFiles/Prakt1_2.dir/build.make Prakt1/2/CMakeFiles/Prakt1_2.dir/clean
-.PHONY : Prakt1/2/CMakeFiles/Prakt1_2.dir/clean
+Prakt2/2/CMakeFiles/Prakt2_2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Prakt2/2/CMakeFiles/Prakt2_2.dir/build.make Prakt2/2/CMakeFiles/Prakt2_2.dir/clean
+.PHONY : Prakt2/2/CMakeFiles/Prakt2_2.dir/clean
 
 #=============================================================================
-# Target rules for target Prakt1/3/CMakeFiles/Prakt1_3.dir
+# Target rules for target Prakt2/3/CMakeFiles/Prakt2_3.dir
 
 # All Build rule for target.
-Prakt1/3/CMakeFiles/Prakt1_3.dir/all:
-	$(MAKE) $(MAKESILENT) -f Prakt1/3/CMakeFiles/Prakt1_3.dir/build.make Prakt1/3/CMakeFiles/Prakt1_3.dir/depend
-	$(MAKE) $(MAKESILENT) -f Prakt1/3/CMakeFiles/Prakt1_3.dir/build.make Prakt1/3/CMakeFiles/Prakt1_3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=10,11,12 "Built target Prakt1_3"
-.PHONY : Prakt1/3/CMakeFiles/Prakt1_3.dir/all
+Prakt2/3/CMakeFiles/Prakt2_3.dir/all:
+	$(MAKE) $(MAKESILENT) -f Prakt2/3/CMakeFiles/Prakt2_3.dir/build.make Prakt2/3/CMakeFiles/Prakt2_3.dir/depend
+	$(MAKE) $(MAKESILENT) -f Prakt2/3/CMakeFiles/Prakt2_3.dir/build.make Prakt2/3/CMakeFiles/Prakt2_3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=10,11,12 "Built target Prakt2_3"
+.PHONY : Prakt2/3/CMakeFiles/Prakt2_3.dir/all
 
 # Build rule for subdir invocation for target.
-Prakt1/3/CMakeFiles/Prakt1_3.dir/rule: cmake_check_build_system
+Prakt2/3/CMakeFiles/Prakt2_3.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt1/3/CMakeFiles/Prakt1_3.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt2/3/CMakeFiles/Prakt2_3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 0
-.PHONY : Prakt1/3/CMakeFiles/Prakt1_3.dir/rule
+.PHONY : Prakt2/3/CMakeFiles/Prakt2_3.dir/rule
 
 # Convenience name for target.
-Prakt1_3: Prakt1/3/CMakeFiles/Prakt1_3.dir/rule
-.PHONY : Prakt1_3
+Prakt2_3: Prakt2/3/CMakeFiles/Prakt2_3.dir/rule
+.PHONY : Prakt2_3
 
 # clean rule for target.
-Prakt1/3/CMakeFiles/Prakt1_3.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Prakt1/3/CMakeFiles/Prakt1_3.dir/build.make Prakt1/3/CMakeFiles/Prakt1_3.dir/clean
-.PHONY : Prakt1/3/CMakeFiles/Prakt1_3.dir/clean
+Prakt2/3/CMakeFiles/Prakt2_3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Prakt2/3/CMakeFiles/Prakt2_3.dir/build.make Prakt2/3/CMakeFiles/Prakt2_3.dir/clean
+.PHONY : Prakt2/3/CMakeFiles/Prakt2_3.dir/clean
+
+#=============================================================================
+# Target rules for target Prakt3/CMakeFiles/Prakt3.dir
+
+# All Build rule for target.
+Prakt3/CMakeFiles/Prakt3.dir/all:
+	$(MAKE) $(MAKESILENT) -f Prakt3/CMakeFiles/Prakt3.dir/build.make Prakt3/CMakeFiles/Prakt3.dir/depend
+	$(MAKE) $(MAKESILENT) -f Prakt3/CMakeFiles/Prakt3.dir/build.make Prakt3/CMakeFiles/Prakt3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=13,14,15 "Built target Prakt3"
+.PHONY : Prakt3/CMakeFiles/Prakt3.dir/all
+
+# Build rule for subdir invocation for target.
+Prakt3/CMakeFiles/Prakt3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt3/CMakeFiles/Prakt3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 0
+.PHONY : Prakt3/CMakeFiles/Prakt3.dir/rule
+
+# Convenience name for target.
+Prakt3: Prakt3/CMakeFiles/Prakt3.dir/rule
+.PHONY : Prakt3
+
+# clean rule for target.
+Prakt3/CMakeFiles/Prakt3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Prakt3/CMakeFiles/Prakt3.dir/build.make Prakt3/CMakeFiles/Prakt3.dir/clean
+.PHONY : Prakt3/CMakeFiles/Prakt3.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

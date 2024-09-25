@@ -271,31 +271,67 @@ Prakt1.3_IS_TOP_LEVEL:STATIC=OFF
 Prakt1.3_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt1/3
 
 //Value Computed by CMake
-Prakt1_1_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/1
+Prakt1_1_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/1
 
 //Value Computed by CMake
 Prakt1_1_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Prakt1_1_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt1/1
+Prakt1_1_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt2/1
 
 //Value Computed by CMake
-Prakt1_2_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/2
+Prakt1_2_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/2
 
 //Value Computed by CMake
 Prakt1_2_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Prakt1_2_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt1/2
+Prakt1_2_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt2/2
 
 //Value Computed by CMake
-Prakt1_3_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt1/3
+Prakt1_3_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/3
 
 //Value Computed by CMake
 Prakt1_3_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Prakt1_3_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt1/3
+Prakt1_3_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt2/3
+
+//Value Computed by CMake
+Prakt2_1_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/1
+
+//Value Computed by CMake
+Prakt2_1_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Prakt2_1_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt2/1
+
+//Value Computed by CMake
+Prakt2_2_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/2
+
+//Value Computed by CMake
+Prakt2_2_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Prakt2_2_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt2/2
+
+//Value Computed by CMake
+Prakt2_3_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/3
+
+//Value Computed by CMake
+Prakt2_3_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Prakt2_3_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt2/3
+
+//Value Computed by CMake
+Prakt3_BINARY_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt3
+
+//Value Computed by CMake
+Prakt3_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Prakt3_SOURCE_DIR:STATIC=/home/malinka/CLionProjects/Algorithms/Prakt3
 
 
 ########################
@@ -400,7 +436,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

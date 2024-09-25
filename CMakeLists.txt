@@ -4,11 +4,14 @@ add_subdirectory(
         Prakt0
 )
 add_subdirectory(
-        Prakt1/1
+        Prakt2/1
 )
 add_subdirectory(
-        Prakt1/2
+        Prakt2/2
 )
 add_subdirectory(
-        Prakt1/3
+        Prakt2/3
+)
+add_subdirectory(
+        Prakt3
 )

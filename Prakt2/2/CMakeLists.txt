@@ -6,10 +6,10 @@
 # one task don't affect another task.
 
 
-project(Prakt1_3)
+project(Prakt2_2)
 
 set(CMAKE_CXX_STANDARD 20)
 
 
 # Add tasks subprojects
-add_executable(Prakt1_3 main.cpp functions.cpp functions.h)
+add_executable(Prakt2_2 main.cpp ../functions.cpp ../header.h)
