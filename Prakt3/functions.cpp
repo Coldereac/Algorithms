@@ -379,5 +379,11 @@ void findFootballerMenu(PNode head) {
 
     cout << "Enter number of goals scored: ";
     cin >> targetFootballer.goals;
-    printFootballer(&findFootballer(head, targetFootballer)->footballer);
+    PNode founded = findFootballer(head, targetFootballer);
+    if (!isEmpty(founded)) {
+        printFootballer(&founded->footballer);
+    }
+    else {
+        cout << "Footballer not found";
+    }
 }
