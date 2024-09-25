@@ -53,7 +53,7 @@ void writeToFile(PNode head, const char *filename);
 void readFromFile(PNode &head, const char *filename);
 
 // Додавання нового футболіста у список
-void addFootballer(PNode &head, Footballer newFootballer);
+void addFootballer(PNode *head, Footballer newFootballer);
 
 // Пошук найкращого нападника (за кількістю голів)
 void findBestForwarder(PNode head, Footballer *bestForwarder);
@@ -62,7 +62,7 @@ void findBestForwarder(PNode head, Footballer *bestForwarder);
 void printTeam(PNode head);
 
 // Пошук футболістів, які зіграли менше ніж 5 матчів
-void findLess5Games(PNode head, PNode &result);
+void findLess5Games(PNode head, PNode *result);
 
 // Виведення амплуа (позиції) футболіста
 void outputAmplua(AmplayType amplayType);

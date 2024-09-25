@@ -1,4 +1,3 @@
-
 #ifndef ALGORITHMS_FUNCTIONS_H
 #define ALGORITHMS_FUNCTIONS_H
 
@@ -42,6 +41,12 @@ struct Node {
 
 typedef Node *PNode; // Тип для зручного використання вказівників на вузли списку
 
+// Перевірка, чи є список порожнім
+bool isEmpty(PNode head);
+
+// Функція порівняння двох футболістів
+bool equals(const Footballer &a, const Footballer &b);
+
 // Виведення інформації про одного футболіста
 void printFootballer(Footballer *footballer);
 
@@ -49,10 +54,10 @@ void printFootballer(Footballer *footballer);
 void writeToFile(PNode head, const char *filename);
 
 // Читання списку футболістів з файлу
-void readFromFile(PNode &head, const char *filename);
+void readFromFile(PNode *head, const char *filename);
 
 // Додавання нового футболіста у список
-void addFootballer(PNode &head, Footballer newFootballer);
+void addFootballer(PNode *head, Footballer newFootballer);
 
 // Пошук найкращого нападника (за кількістю голів)
 void findBestForwarder(PNode head, Footballer *bestForwarder);
@@ -61,7 +66,7 @@ void findBestForwarder(PNode head, Footballer *bestForwarder);
 void printTeam(PNode head);
 
 // Пошук футболістів, які зіграли менше ніж 5 матчів
-void findLess5Games(PNode head, PNode &result);
+void findLess5Games(PNode head, PNode *result);
 
 // Виведення амплуа (позиції) футболіста
 void outputAmplua(AmplayType amplayType);
@@ -73,7 +78,7 @@ void deleteFootballer(PNode *head, Footballer toDelete);
 void printMenu();
 
 // Меню для додавання футболіста
-void addFootballerMenu(PNode &head);
+void addFootballerMenu(PNode *head);
 
 // Меню для видалення футболіста
 void deleteFootballerMenu(PNode *head);
@@ -86,5 +91,20 @@ void findLess5GamesMenu(PNode head);
 
 //Вивільнення пам'яті
 void freeMemory(PNode *node);
+
+// Меню для вставки нового елемента після заданого
+void insertAfterMenu(PNode *head);
+
+// Вставка нового елемента після заданого
+void insertAfter(PNode *head, Footballer newFootballer, Footballer targetFootballer);
+
+// Меню для вставки нового елемента перед заданим
+void insertBeforeMenu(PNode *head);
+
+// Вставка нового елемента після заданим
+void insertBefore(PNode *head, Footballer newFootballer, Footballer targetFootballer);
+
+//Збирання інформації про нового футболіста
+Footballer createFootballer();
 
 #endif // ALGORITHMS_FUNCTIONS_H

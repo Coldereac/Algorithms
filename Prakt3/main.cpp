@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     PNode head = nullptr;
 
-    readFromFile(head, FILEPATH); // Завантажуємо дані з файлу
+    readFromFile(&head, FILEPATH); // Завантажуємо дані з файлу
 
     int choice;
     do {
@@ -14,7 +14,7 @@ int main() {
 
         switch (choice) {
             case 1:
-                addFootballerMenu(head);
+                addFootballerMenu(&head);
                 break;
             case 2:
                 deleteFootballerMenu(&head);
@@ -30,12 +30,18 @@ int main() {
                 findLess5GamesMenu(head);
                 break;
             case 6:
+                insertBeforeMenu(&head);
+                break;
+            case 7:
+                insertAfterMenu(&head);
+                break;
+            case 0:
                 cout << "Exiting program..." << endl;
                 break;
             default:
                 cout << "Invalid choice, please try again." << endl;
         }
-    } while (choice != 6);
+    } while (choice != 0);
 
     // Звільняємо пам'ять
     // PNode current = head;

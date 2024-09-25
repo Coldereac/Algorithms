@@ -12,12 +12,12 @@ bool isEmpty(PNode head) {
 
 
 // Функція для додавання футболіста до списку
-void addFootballer(PNode &head, Footballer newFootballer) {
+void addFootballer(PNode *head, Footballer newFootballer) {
     auto newNode = new Node{newFootballer, nullptr};
-    if (isEmpty(head)) {
-        head = newNode;
+    if (isEmpty(*head)) {
+        *head = newNode;
     } else {
-        Node *temp = head;
+        Node *temp = *head;
         while (!isEmpty(temp->next)) {
             temp = temp->next;
         }
@@ -64,7 +64,7 @@ void findBestForwarder(PNode head, Footballer *bestForwarder) {
 }
 
 // Функція для пошуку футболістів з менше ніж 5 матчами
-void findLess5Games(PNode head, PNode &result) {
+void findLess5Games(PNode head, PNode *result) {
     PNode temp = head;
     while (!isEmpty(temp)) {
         if (temp->footballer.games < 5) {
@@ -144,7 +144,7 @@ void readFromFile(PNode *head, const char *filename) {
     for (int i = 0; i < size; i++) {
         Footballer footballer{};
         fread(&footballer, sizeof(Footballer), 1, inFile);
-        addFootballer(*head, footballer); // Додаємо футболіста до списку
+        addFootballer(head, footballer); // Додаємо футболіста до списку
     }
     cout << endl << "Readed from file " << filename << endl;
     fclose(inFile); // Закриваємо файл
@@ -176,7 +176,9 @@ void printMenu() {
     cout << "3. Print Team" << endl;
     cout << "4. Find Best Forward" << endl;
     cout << "5. Find Footballers with Less Than 5 Games" << endl;
-    cout << "6. Exit" << endl;
+    cout << "6. Insert Footballer before" << endl;
+    cout << "7. Insert Footballer after" << endl;
+    cout << "0. Exit" << endl;
     cout << "Enter your choice: ";
 }
 
@@ -201,19 +203,19 @@ Footballer createFootballer() {
     return footballer;
 }
 
-void addFootballerMenu(PNode head) {
+void addFootballerMenu(PNode *head) {
     Footballer newFootballer = createFootballer();
     addFootballer(head, newFootballer);
-    writeToFile(head, FILEPATH); // Зберігаємо зміни у файл
+    writeToFile(*head, FILEPATH); // Зберігаємо зміни у файл
 }
 
-void deleteFootballerMenu(PNode head) {
+void deleteFootballerMenu(PNode *head) {
     Footballer footballerToDelete{};
     int choice;
-    printTeam(head);
+    printTeam(*head);
     cout << "Input index of the footballer you want to delete" << endl;
     cin >> choice;
-    PNode temp = head;
+    PNode temp = *head;
     while (choice > 0 && !isEmpty(temp)) {
         temp = temp->next;
         choice--;
@@ -222,8 +224,8 @@ void deleteFootballerMenu(PNode head) {
         cout << "Wrong choice";
     } else {
         footballerToDelete = temp->footballer;
-        deleteFootballer(&head, footballerToDelete);
-        writeToFile(head, FILEPATH); // Зберігаємо зміни у файл
+        deleteFootballer(head, footballerToDelete);
+        writeToFile(*head, FILEPATH); // Зберігаємо зміни у файл
     }
 }
 
@@ -251,7 +253,7 @@ void findBestForwardMenu(PNode head) {
 void findLess5GamesMenu(PNode head) {
     PNode playersLess5 = nullptr;
 
-    findLess5Games(head, playersLess5);
+    findLess5Games(head, &playersLess5);
 
     if (!isEmpty(playersLess5)) {
         cout << "Footballers with less than 5 games:" << endl;
@@ -262,7 +264,6 @@ void findLess5GamesMenu(PNode head) {
 
     freeMemory(&playersLess5);
 }
-
 
 
 // Вставка нового елемента перед заданим
@@ -358,4 +359,3 @@ PNode findFootballer(PNode head, Footballer targetFootballer) {
     }
     return founded;
 }
-

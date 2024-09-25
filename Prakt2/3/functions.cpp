@@ -6,13 +6,13 @@
 using namespace std;
 
 // Функція для додавання футболіста до списку
-void addFootballer(PNode &head, Footballer newFootballer) {
+void addFootballer(PNode *head, Footballer newFootballer) {
     auto newNode = new Node{newFootballer, nullptr};
 
-    if (head == nullptr) {
-        head = newNode;
+    if (*head == nullptr) {
+        *head = newNode;
     } else {
-        Node *temp = head;
+        Node *temp = *head;
         while (temp->next != nullptr) {
             temp = temp->next;
         }
@@ -57,7 +57,7 @@ void findBestForwarder(PNode head, Footballer *bestForwarder) {
 }
 
 // Функція для пошуку футболістів з менше ніж 5 матчами
-void findLess5Games(PNode head, PNode &result) {
+void findLess5Games(PNode head, PNode *result) {
     PNode temp = head;
     while (temp != nullptr) {
         if (temp->footballer.games < 5) {
@@ -133,7 +133,7 @@ void readFromFile(PNode &head, const char *filename) {
     for (int i = 0; i < size; i++) {
         Footballer footballer{};
         fread(&footballer, sizeof(Footballer), 1, inFile);
-        addFootballer(head, footballer); // Додаємо футболіста до списку
+        addFootballer(&head, footballer); // Додаємо футболіста до списку
     }
 
     fclose(inFile); // Закриваємо файл
@@ -189,7 +189,7 @@ void addFootballerMenu(PNode &head) {
     cout << "Enter number of goals scored: ";
     cin >> newFootballer.goals;
 
-    addFootballer(head, newFootballer);
+    addFootballer(&head, newFootballer);
     writeToFile(head, FILEPATH); // Зберігаємо зміни у файл
 }
 
@@ -241,7 +241,7 @@ void findBestForwardMenu(PNode head) {
 void findLess5GamesMenu(PNode head) {
     PNode playersWithLessThan5Games = nullptr;
 
-    findLess5Games(head, playersWithLessThan5Games);
+    findLess5Games(head, &playersWithLessThan5Games);
 
     if (playersWithLessThan5Games != nullptr) {
         cout << "Footballers with less than 5 games:" << endl;
