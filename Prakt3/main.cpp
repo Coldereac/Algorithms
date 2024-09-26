@@ -17,25 +17,28 @@ int main() {
                 addFootballerMenu(&head);
                 break;
             case 2:
-                deleteFootballerMenu(&head);
+                addManyFootballersMenu(&head);
                 break;
             case 3:
+                deleteFootballerMenu(&head);
+                break;
+            case 4:
                 cout << "Team:" << endl;
                 printTeam(head);
                 break;
-            case 4:
+            case 5:
                 findBestForwardMenu(head);
                 break;
-            case 5:
+            case 6:
                 findLess5GamesMenu(head);
                 break;
-            case 6:
+            case 7:
                 insertBeforeMenu(&head);
                 break;
-            case 7:
+            case 8:
                 insertAfterMenu(&head);
                 break;
-            case 8:
+            case 9:
                 findFootballerMenu(head);
                 break;
             case 0:

@@ -113,4 +113,8 @@ void findFootballerMenu(PNode head);
 // Пошук елемента з заданими властивостями
 PNode findFootballer(PNode head, Footballer targetFootballer);
 
+void addManyFootballersMenu(PNode *head);
+
+void addManyFootballers(PNode *head, int amount);
+
 #endif // ALGORITHMS_FUNCTIONS_H

@@ -25,6 +25,24 @@ void addFootballer(PNode *head, Footballer newFootballer) {
     }
 }
 
+void addManyFootballers(PNode *head, int amount) {
+    for (int i = 0; i < amount; i++) {
+        addFootballerMenu(head);
+    }
+}
+
+void addManyFootballersMenu(PNode *head) {
+    int amount = 0;
+    cout << "Input amount of Footballers you want to add: ";
+    cin >> amount;
+    if (amount > 0) {
+        addManyFootballers(head, amount);
+    }
+    else {
+        cout << "Wrong input. Please try again." << endl;
+    }
+}
+
 // Функція порівняння двох футболістів
 bool equals(const Footballer &a, const Footballer &b) {
     return strcmp(a.lastName, b.lastName) == 0 && a.amplay == b.amplay && a.age == b.age &&
@@ -172,13 +190,14 @@ void outputAmplua(AmplayType amplayType) {
 void printMenu() {
     cout << "Menu:" << endl;
     cout << "1. Add Footballer" << endl;
-    cout << "2. Delete Footballer" << endl;
-    cout << "3. Print Team" << endl;
-    cout << "4. Find Best Forward" << endl;
-    cout << "5. Find Footballers with Less Than 5 Games" << endl;
-    cout << "6. Insert Footballer before" << endl;
-    cout << "7. Insert Footballer after" << endl;
-    cout << "8. Find Footballer by params" << endl;
+    cout << "2. Add many Footballers" << endl;
+    cout << "3. Delete Footballer" << endl;
+    cout << "4. Print Team" << endl;
+    cout << "5. Find Best Forward" << endl;
+    cout << "6. Find Footballers with Less Than 5 Games" << endl;
+    cout << "7. Insert Footballer before" << endl;
+    cout << "8. Insert Footballer after" << endl;
+    cout << "9. Find Footballer by params" << endl;
     cout << "0. Exit" << endl;
     cout << "Enter your choice: ";
 }
