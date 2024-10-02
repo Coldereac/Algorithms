@@ -10,6 +10,15 @@ bool isEmpty(PNode head) {
     return head == nullptr;
 }
 
+void refreshIndexes(PNode head, int startIndex) {
+    int index = startIndex; // Початкове значення індексу
+    PNode temp = head;
+    while (temp != nullptr) {
+        temp->footballer.index = index++; // Оновлюємо індекс для футболіста
+        temp = temp->next; // Переходимо до наступного вузла
+    }
+}
+
 // Функція для додавання футболіста до списку
 void addFootballer(PNode *head, Footballer newFootballer) {
     auto newNode = new Node{newFootballer, nullptr};
@@ -110,8 +119,10 @@ void deleteFootballer(PNode *head, int index) {
 
     if (isEmpty(prev)) {
         *head = temp->next; // Видаляємо перший елемент
+        refreshIndexes(*head, 0);
     } else {
         prev->next = temp->next;
+        refreshIndexes(prev->next, index);
     }
 
     delete temp;
@@ -336,12 +347,6 @@ void insertBefore(PNode *head, Footballer newFootballer, int targetIndex) {
     if ((*head)->footballer.index == targetIndex) {
         newNode->next = *head;
         *head = newNode;
-        // Оновлення індексів
-        PNode iterator = newNode;
-        while (iterator != nullptr) {
-            iterator->footballer.index++;
-            iterator = iterator->next;
-        }
         return;
     }
 
@@ -353,12 +358,6 @@ void insertBefore(PNode *head, Footballer newFootballer, int targetIndex) {
     if (!isEmpty(temp->next)) {
         newNode->next = temp->next;
         temp->next = newNode;
-        // Оновлення індексів
-        PNode iterator = newNode;
-        while (iterator != nullptr) {
-            iterator->footballer.index++;
-            iterator = iterator->next;
-        }
     }
 }
 
@@ -369,6 +368,7 @@ void insertBeforeMenu(PNode *head) {
     cin >> choice;
     Footballer newFootballer = createFootballer();
     insertBefore(head, newFootballer, choice);
+    refreshIndexes(*head);
     writeToFile(*head, FILEPATH);
 }
 
@@ -385,12 +385,6 @@ void insertAfter(PNode *head, Footballer newFootballer, int targetIndex) {
     if (!isEmpty(temp)) {
         newNode->next = temp->next;
         temp->next = newNode;
-        // Оновлення індексів
-        PNode iterator = newNode;
-        while (iterator != nullptr) {
-            iterator->footballer.index++;
-            iterator = iterator->next;
-        }
     }
 }
 
@@ -401,6 +395,7 @@ void insertAfterMenu(PNode *head) {
     cin >> choice;
     Footballer newFootballer = createFootballer();
     insertAfter(head, newFootballer, choice);
+    refreshIndexes(*head);
     writeToFile(*head, FILEPATH);
 }
 
