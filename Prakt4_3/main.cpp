@@ -6,19 +6,24 @@ using namespace std;
 
 // Головна функція для тестування
 int main() {
-    PNode head = nullptr;
+    PNode head = new Node{0, new Node{100, nullptr}};
     int size;
     cout << "Input size to create ordered list: ";
     cin >> size;
     createOrderedList(&head, size);
-    cout << "Список після вставок: ";
+    cout << "List after insertion: ";
     printList(head);
 
     int numberToDelete;
-    cout << "Enter number to delete: ";
-    cin >> numberToDelete;
+    do {
+        cout << "Enter number to delete(1-99): ";
+        cin >> numberToDelete;
+        if (numberToDelete < 1 || numberToDelete > 99) {
+            cout << "Invalid input, try again." << endl;
+        }
+    } while (numberToDelete < 1 || numberToDelete > 99);
     deleteNode(&head, numberToDelete);
-    cout << "Список після видалення " << numberToDelete << ": ";
+    cout << "List after deletion " << numberToDelete << ": ";
     printList(head);
 
 

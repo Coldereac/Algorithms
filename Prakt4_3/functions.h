@@ -8,7 +8,7 @@ struct Node {
 
 typedef Node *PNode;
 
-void printList(Node *head);
+void printList(PNode head);
 
 void deleteNode(PNode *head, int value);
 
