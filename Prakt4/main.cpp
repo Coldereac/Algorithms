@@ -37,8 +37,7 @@ int main() {
         }
     } while (choice != 0);
 
-    // freeMemory(&head);
-    freeMemoryRecursively(&head);
+    freeMemoryRecursively(&head); // Вивільнення пам'яті
 
     return 0;
 }

@@ -15,11 +15,16 @@ void addFootballer(PNode *head, Footballer newFootballer) {
     auto newNode = new Node{newFootballer, nullptr};
     if (isEmpty(*head)) {
         *head = newNode;
+        newNode->footballer.index = 0; // Задаємо індекс 0 для першого футболіста
     } else {
         Node *temp = *head;
+        int indexCounter = 0;
         while (!isEmpty(temp->next)) {
             temp = temp->next;
+            indexCounter++;
         }
+        indexCounter++; // Наступний індекс
+        newNode->footballer.index = indexCounter; // Задаємо новий індекс
         temp->next = newNode;
     }
 }
@@ -49,7 +54,8 @@ bool equals(const Footballer &a, const Footballer &b) {
 
 // Функція для виведення інформації про футболіста
 void printFootballer(Footballer *footballer) {
-    cout << "Name: " << footballer->lastName << " Amplua: ";
+    cout << "Index: " << footballer->index;
+    cout << " Name: " << footballer->lastName << " Amplua: ";
     outputAmplua(footballer->amplay);
     cout << " Age: " << footballer->age
             << " Number of games: " << footballer->games
@@ -59,9 +65,7 @@ void printFootballer(Footballer *footballer) {
 // Функція для виведення всієї команди
 void printTeam(PNode head) {
     PNode temp = head;
-    int counter = 0;
     while (!isEmpty(temp)) {
-        cout << "Index: " << counter++ << " ";
         printFootballer(&temp->footballer);
         temp = temp->next;
         cout << endl;
@@ -91,11 +95,11 @@ void findLess5Games(PNode head, PNode *result) {
 }
 
 // Функція для видалення футболіста зі списку
-void deleteFootballer(PNode *head, Footballer &toDelete) {
+void deleteFootballer(PNode *head, int index) {
     PNode temp = *head;
     PNode prev = nullptr;
 
-    while (!isEmpty(temp) && !equals(temp->footballer, toDelete)) {
+    while (!isEmpty(temp) && temp->footballer.index != index) {
         prev = temp;
         temp = temp->next;
     }
@@ -279,23 +283,12 @@ void addFootballerMenu(PNode *head) {
 }
 
 void deleteFootballerMenu(PNode *head) {
-    Footballer footballerToDelete{};
     int choice;
     printTeam(*head);
     cout << "Input index of the footballer you want to delete" << endl;
     cin >> choice;
-    PNode temp = *head;
-    while (choice > 0 && !isEmpty(temp)) {
-        temp = temp->next;
-        choice--;
-    }
-    if (isEmpty(temp)) {
-        cout << "Wrong choice";
-    } else {
-        footballerToDelete = temp->footballer;
-        deleteFootballer(head, footballerToDelete);
-        writeToFile(*head, FILEPATH); // Зберігаємо зміни у файл
-    }
+    deleteFootballer(head, choice);
+    writeToFile(*head, FILEPATH);
 }
 
 void freeMemory(PNode *node) {
@@ -336,82 +329,79 @@ void findLess5GamesMenu(PNode head) {
 
 
 // Вставка нового елемента перед заданим
-void insertBefore(PNode *head, Footballer newFootballer, Footballer targetFootballer) {
+void insertBefore(PNode *head, Footballer newFootballer, int targetIndex) {
     auto newNode = new Node{newFootballer, nullptr};
     if (isEmpty(*head)) return;
 
-    if (equals((*head)->footballer, targetFootballer)) {
+    if ((*head)->footballer.index == targetIndex) {
         newNode->next = *head;
         *head = newNode;
+        // Оновлення індексів
+        PNode iterator = newNode;
+        while (iterator != nullptr) {
+            iterator->footballer.index++;
+            iterator = iterator->next;
+        }
         return;
     }
 
     PNode temp = *head;
-    while (!isEmpty(temp->next) && !equals(temp->next->footballer, targetFootballer)) {
+    while (!isEmpty(temp->next) && temp->next->footballer.index != targetIndex) {
         temp = temp->next;
     }
 
     if (!isEmpty(temp->next)) {
         newNode->next = temp->next;
         temp->next = newNode;
+        // Оновлення індексів
+        PNode iterator = newNode;
+        while (iterator != nullptr) {
+            iterator->footballer.index++;
+            iterator = iterator->next;
+        }
     }
 }
 
 void insertBeforeMenu(PNode *head) {
-    Footballer targetFootballer{};
     int choice;
     printTeam(*head);
     cout << "Input index of the footballer you want to insert before" << endl;
     cin >> choice;
-    PNode temp = *head;
-    while (choice > 0 && !isEmpty(temp)) {
-        temp = temp->next;
-        choice--;
-    }
-    if (temp == nullptr) {
-        cout << "Wrong choice";
-    } else {
-        targetFootballer = temp->footballer;
-        Footballer newFootballer = createFootballer();
-        insertBefore(head, newFootballer, targetFootballer);
-        writeToFile(*head, FILEPATH); // Зберігаємо зміни у файл
-    }
+    Footballer newFootballer = createFootballer();
+    insertBefore(head, newFootballer, choice);
+    writeToFile(*head, FILEPATH);
 }
 
 // Вставка нового елемента після заданого
-void insertAfter(PNode *head, Footballer newFootballer, Footballer targetFootballer) {
+
+void insertAfter(PNode *head, Footballer newFootballer, int targetIndex) {
     auto newNode = new Node{newFootballer, nullptr};
     PNode temp = *head;
 
-    while (!isEmpty(temp) && !equals(temp->footballer, targetFootballer)) {
+    while (!isEmpty(temp) && temp->footballer.index != targetIndex) {
         temp = temp->next;
     }
 
     if (!isEmpty(temp)) {
         newNode->next = temp->next;
         temp->next = newNode;
+        // Оновлення індексів
+        PNode iterator = newNode;
+        while (iterator != nullptr) {
+            iterator->footballer.index++;
+            iterator = iterator->next;
+        }
     }
 }
 
 void insertAfterMenu(PNode *head) {
-    Footballer targetFootballer{};
     int choice;
     printTeam(*head);
     cout << "Input index of the footballer you want to insert after" << endl;
     cin >> choice;
-    PNode temp = *head;
-    while (choice > 0 && !isEmpty(temp)) {
-        temp = temp->next;
-        choice--;
-    }
-    if (isEmpty(temp)) {
-        cout << "Wrong choice";
-    } else {
-        targetFootballer = temp->footballer;
-        Footballer newFootballer = createFootballer();
-        insertAfter(head, newFootballer, targetFootballer);
-        writeToFile(*head, FILEPATH); // Зберігаємо зміни у файл
-    }
+    Footballer newFootballer = createFootballer();
+    insertAfter(head, newFootballer, choice);
+    writeToFile(*head, FILEPATH);
 }
 
 // Пошук елемента з заданими властивостями
