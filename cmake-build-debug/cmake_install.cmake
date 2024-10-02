@@ -67,6 +67,16 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt3/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt4/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt4_3/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

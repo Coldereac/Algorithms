@@ -31,6 +31,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/malinka/CLionProjects/Algorithms/Prakt2/2/CMakeLists.txt"
   "/home/malinka/CLionProjects/Algorithms/Prakt2/3/CMakeLists.txt"
   "/home/malinka/CLionProjects/Algorithms/Prakt3/CMakeLists.txt"
+  "/home/malinka/CLionProjects/Algorithms/Prakt4/CMakeLists.txt"
+  "/home/malinka/CLionProjects/Algorithms/Prakt4_3/CMakeLists.txt"
   "CMakeFiles/3.29.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.6/CMakeSystem.cmake"
@@ -50,6 +52,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Prakt2/2/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Prakt2/3/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Prakt3/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Prakt4/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Prakt4_3/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -59,4 +63,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "Prakt2/2/CMakeFiles/Prakt2_2.dir/DependInfo.cmake"
   "Prakt2/3/CMakeFiles/Prakt2_3.dir/DependInfo.cmake"
   "Prakt3/CMakeFiles/Prakt3.dir/DependInfo.cmake"
+  "Prakt4/CMakeFiles/Prakt4.dir/DependInfo.cmake"
+  "Prakt4_3/CMakeFiles/Prakt4_3.dir/DependInfo.cmake"
   )

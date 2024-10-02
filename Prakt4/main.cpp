@@ -1,4 +1,5 @@
 #include "functions.h"
+#include "recursion.h"
 using namespace std;
 
 int main() {
@@ -25,6 +26,9 @@ int main() {
             case 4:
                 findMenu(head);
                 break;
+            case 5:
+                recursionMenu(&head);
+                break;
             case 0:
                 cout << "Exiting program..." << endl;
                 break;
@@ -33,7 +37,8 @@ int main() {
         }
     } while (choice != 0);
 
-    freeMemory(&head);
+    // freeMemory(&head);
+    freeMemoryRecursively(&head);
 
     return 0;
 }

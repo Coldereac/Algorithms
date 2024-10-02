@@ -68,6 +68,8 @@ all: Prakt2/1/all
 all: Prakt2/2/all
 all: Prakt2/3/all
 all: Prakt3/all
+all: Prakt4/all
+all: Prakt4_3/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,8 @@ preinstall: Prakt2/1/preinstall
 preinstall: Prakt2/2/preinstall
 preinstall: Prakt2/3/preinstall
 preinstall: Prakt3/preinstall
+preinstall: Prakt4/preinstall
+preinstall: Prakt4_3/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -84,6 +88,8 @@ clean: Prakt2/1/clean
 clean: Prakt2/2/clean
 clean: Prakt2/3/clean
 clean: Prakt3/clean
+clean: Prakt4/clean
+clean: Prakt4_3/clean
 .PHONY : clean
 
 #=============================================================================
@@ -160,6 +166,36 @@ Prakt3/preinstall:
 # Recursive "clean" directory target.
 Prakt3/clean: Prakt3/CMakeFiles/Prakt3.dir/clean
 .PHONY : Prakt3/clean
+
+#=============================================================================
+# Directory level rules for directory Prakt4
+
+# Recursive "all" directory target.
+Prakt4/all: Prakt4/CMakeFiles/Prakt4.dir/all
+.PHONY : Prakt4/all
+
+# Recursive "preinstall" directory target.
+Prakt4/preinstall:
+.PHONY : Prakt4/preinstall
+
+# Recursive "clean" directory target.
+Prakt4/clean: Prakt4/CMakeFiles/Prakt4.dir/clean
+.PHONY : Prakt4/clean
+
+#=============================================================================
+# Directory level rules for directory Prakt4_3
+
+# Recursive "all" directory target.
+Prakt4_3/all: Prakt4_3/CMakeFiles/Prakt4_3.dir/all
+.PHONY : Prakt4_3/all
+
+# Recursive "preinstall" directory target.
+Prakt4_3/preinstall:
+.PHONY : Prakt4_3/preinstall
+
+# Recursive "clean" directory target.
+Prakt4_3/clean: Prakt4_3/CMakeFiles/Prakt4_3.dir/clean
+.PHONY : Prakt4_3/clean
 
 #=============================================================================
 # Target rules for target Prakt0/CMakeFiles/Prakt0.dir
@@ -290,6 +326,58 @@ Prakt3: Prakt3/CMakeFiles/Prakt3.dir/rule
 Prakt3/CMakeFiles/Prakt3.dir/clean:
 	$(MAKE) $(MAKESILENT) -f Prakt3/CMakeFiles/Prakt3.dir/build.make Prakt3/CMakeFiles/Prakt3.dir/clean
 .PHONY : Prakt3/CMakeFiles/Prakt3.dir/clean
+
+#=============================================================================
+# Target rules for target Prakt4/CMakeFiles/Prakt4.dir
+
+# All Build rule for target.
+Prakt4/CMakeFiles/Prakt4.dir/all:
+	$(MAKE) $(MAKESILENT) -f Prakt4/CMakeFiles/Prakt4.dir/build.make Prakt4/CMakeFiles/Prakt4.dir/depend
+	$(MAKE) $(MAKESILENT) -f Prakt4/CMakeFiles/Prakt4.dir/build.make Prakt4/CMakeFiles/Prakt4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=16,17,18,19 "Built target Prakt4"
+.PHONY : Prakt4/CMakeFiles/Prakt4.dir/all
+
+# Build rule for subdir invocation for target.
+Prakt4/CMakeFiles/Prakt4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt4/CMakeFiles/Prakt4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 0
+.PHONY : Prakt4/CMakeFiles/Prakt4.dir/rule
+
+# Convenience name for target.
+Prakt4: Prakt4/CMakeFiles/Prakt4.dir/rule
+.PHONY : Prakt4
+
+# clean rule for target.
+Prakt4/CMakeFiles/Prakt4.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Prakt4/CMakeFiles/Prakt4.dir/build.make Prakt4/CMakeFiles/Prakt4.dir/clean
+.PHONY : Prakt4/CMakeFiles/Prakt4.dir/clean
+
+#=============================================================================
+# Target rules for target Prakt4_3/CMakeFiles/Prakt4_3.dir
+
+# All Build rule for target.
+Prakt4_3/CMakeFiles/Prakt4_3.dir/all:
+	$(MAKE) $(MAKESILENT) -f Prakt4_3/CMakeFiles/Prakt4_3.dir/build.make Prakt4_3/CMakeFiles/Prakt4_3.dir/depend
+	$(MAKE) $(MAKESILENT) -f Prakt4_3/CMakeFiles/Prakt4_3.dir/build.make Prakt4_3/CMakeFiles/Prakt4_3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles --progress-num=20,21,22 "Built target Prakt4_3"
+.PHONY : Prakt4_3/CMakeFiles/Prakt4_3.dir/all
+
+# Build rule for subdir invocation for target.
+Prakt4_3/CMakeFiles/Prakt4_3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt4_3/CMakeFiles/Prakt4_3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/malinka/CLionProjects/Algorithms/cmake-build-debug/CMakeFiles 0
+.PHONY : Prakt4_3/CMakeFiles/Prakt4_3.dir/rule
+
+# Convenience name for target.
+Prakt4_3: Prakt4_3/CMakeFiles/Prakt4_3.dir/rule
+.PHONY : Prakt4_3
+
+# clean rule for target.
+Prakt4_3/CMakeFiles/Prakt4_3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Prakt4_3/CMakeFiles/Prakt4_3.dir/build.make Prakt4_3/CMakeFiles/Prakt4_3.dir/clean
+.PHONY : Prakt4_3/CMakeFiles/Prakt4_3.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -181,6 +181,32 @@ Prakt3/fast:
 	$(MAKE) $(MAKESILENT) -f Prakt3/CMakeFiles/Prakt3.dir/build.make Prakt3/CMakeFiles/Prakt3.dir/build
 .PHONY : Prakt3/fast
 
+#=============================================================================
+# Target rules for targets named Prakt4
+
+# Build rule for target.
+Prakt4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt4
+.PHONY : Prakt4
+
+# fast build rule for target.
+Prakt4/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt4/CMakeFiles/Prakt4.dir/build.make Prakt4/CMakeFiles/Prakt4.dir/build
+.PHONY : Prakt4/fast
+
+#=============================================================================
+# Target rules for targets named Prakt4_3
+
+# Build rule for target.
+Prakt4_3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt4_3
+.PHONY : Prakt4_3
+
+# fast build rule for target.
+Prakt4_3/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt4_3/CMakeFiles/Prakt4_3.dir/build.make Prakt4_3/CMakeFiles/Prakt4_3.dir/build
+.PHONY : Prakt4_3/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -194,6 +220,8 @@ help:
 	@echo "... Prakt2_2"
 	@echo "... Prakt2_3"
 	@echo "... Prakt3"
+	@echo "... Prakt4"
+	@echo "... Prakt4_3"
 .PHONY : help
 
 

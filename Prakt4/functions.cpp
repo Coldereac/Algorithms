@@ -149,6 +149,7 @@ void readFromFile(PNode *head, const char *filename) {
     FILE *inFile = fopen(filename, "rb"); // Відкриваємо файл для читання у бінарному форматі
     if (inFile == nullptr) {
         cout << "Error opening file " << filename << endl;
+        cout << "This file will be created" << endl;
         return;
     }
 
@@ -191,6 +192,7 @@ void printMenu() {
     cout << "2. Delete" << endl;
     cout << "3. Print Team" << endl;
     cout << "4. Find" << endl;
+    cout << "5. Recursion versions of functions" << endl;
     cout << "0. Exit" << endl;
     cout << "Enter your choice: ";
 }
@@ -201,6 +203,7 @@ void addMenu(PNode *head) {
     cout << "2. Insert Footballer after another" << endl;
     cout << "3. Insert Footballer before another" << endl;
     cout << "4. Add many Footballers" << endl;
+    cout << "0. Exit" << endl;
     cout << "Enter your choice: ";
     cin >> choice;
     switch (choice) {
@@ -216,6 +219,8 @@ void addMenu(PNode *head) {
         case 4:
             addManyFootballersMenu(head);
             break;
+        case 0:
+            break;
         default:
             cout << "Invalid choice" << endl;
     }
@@ -226,6 +231,7 @@ void findMenu(PNode head) {
     cout << "1. Find Footballer by all his params" << endl;
     cout << "2. Find best Forward" << endl;
     cout << "3. Find Footballers with less than 5 games" << endl;
+    cout << "0. Exit" << endl;
     cout << "Input your choice: ";
     cin >> choice;
     switch (choice) {
@@ -237,6 +243,8 @@ void findMenu(PNode head) {
             break;
         case 3:
             findLess5GamesMenu(head);
+            break;
+        case 0:
             break;
         default:
             cout << "Invalid choice" << endl;
