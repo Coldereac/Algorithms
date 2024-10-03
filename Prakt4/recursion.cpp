@@ -137,6 +137,7 @@ void recursionMenu(PNode *head) {
     cout << "5. Add Footballer before" << endl;
     cout << "6. Add Footballer after" << endl;
     cout << "7. Delete Footballer" << endl;
+    cout << "8. Print in reverse" << endl;
     cout << "0. Exit" << endl;
     cout << "Enter your choice: ";
     cin >> choice;
@@ -161,6 +162,9 @@ void recursionMenu(PNode *head) {
             break;
         case 7:
             deleteFootballerMenuRecurs(head);
+            break;
+        case 8:
+            printReverse(*head);
             break;
         case 0:
             break;
@@ -216,4 +220,12 @@ bool insertAfterRecursive(PNode *head, const Footballer &newFootballer, int targ
         return true;
     }
     return insertAfterRecursive(&(*head)->next, newFootballer, targetIndex); // Рекурсивно шукаємо далі
+}
+
+int printReverse(PNode head){
+    if (head != nullptr){
+        printReverse(head->next);
+        printFootballer(&head->footballer);
+    }
+    return 0;
 }

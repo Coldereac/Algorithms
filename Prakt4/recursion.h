@@ -40,4 +40,6 @@ void deleteFootballerMenuRecurs(PNode *head);
 
 void findNeededByIndex(PNode*head, PNode&temp);
 
+int printReverse(PNode head);
+
 #endif //RECURSION_H

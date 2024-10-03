@@ -40,45 +40,6 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = C$:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/
-# =============================================================================
-# Object build statements for EXECUTABLE target Algorithms
-
-
-#############################################
-# Order-only phony target for Algorithms
-
-build cmake_object_order_depends_target_Algorithms: phony || .
-
-build CMakeFiles/Algorithms.dir/Prakt0/main.cpp.obj: CXX_COMPILER__Algorithms_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt0/main.cpp || cmake_object_order_depends_target_Algorithms
-  DEP_FILE = CMakeFiles\Algorithms.dir\Prakt0\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Algorithms.dir
-  OBJECT_FILE_DIR = CMakeFiles\Algorithms.dir\Prakt0
-
-build CMakeFiles/Algorithms.dir/Prakt0/functions.cpp.obj: CXX_COMPILER__Algorithms_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt0/functions.cpp || cmake_object_order_depends_target_Algorithms
-  DEP_FILE = CMakeFiles\Algorithms.dir\Prakt0\functions.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Algorithms.dir
-  OBJECT_FILE_DIR = CMakeFiles\Algorithms.dir\Prakt0
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Algorithms
-
-
-#############################################
-# Link the executable Algorithms.exe
-
-build Algorithms.exe: CXX_EXECUTABLE_LINKER__Algorithms_Debug CMakeFiles/Algorithms.dir/Prakt0/main.cpp.obj CMakeFiles/Algorithms.dir/Prakt0/functions.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Algorithms.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = Algorithms.exe
-  TARGET_IMPLIB = libAlgorithms.dll.a
-  TARGET_PDB = Algorithms.exe.dbg
-
 
 #############################################
 # Utility command for edit_cache
@@ -103,9 +64,581 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Prakt0
+
+
+#############################################
+# Order-only phony target for Prakt0
+
+build cmake_object_order_depends_target_Prakt0: phony || .
+
+build Prakt0/CMakeFiles/Prakt0.dir/main.cpp.obj: CXX_COMPILER__Prakt0_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt0/main.cpp || cmake_object_order_depends_target_Prakt0
+  DEP_FILE = Prakt0\CMakeFiles\Prakt0.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt0\CMakeFiles\Prakt0.dir
+  OBJECT_FILE_DIR = Prakt0\CMakeFiles\Prakt0.dir
+
+build Prakt0/CMakeFiles/Prakt0.dir/functions.cpp.obj: CXX_COMPILER__Prakt0_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt0/functions.cpp || cmake_object_order_depends_target_Prakt0
+  DEP_FILE = Prakt0\CMakeFiles\Prakt0.dir\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt0\CMakeFiles\Prakt0.dir
+  OBJECT_FILE_DIR = Prakt0\CMakeFiles\Prakt0.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prakt0
+
+
+#############################################
+# Link the executable Prakt0\Prakt0.exe
+
+build Prakt0/Prakt0.exe: CXX_EXECUTABLE_LINKER__Prakt0_Debug Prakt0/CMakeFiles/Prakt0.dir/main.cpp.obj Prakt0/CMakeFiles/Prakt0.dir/functions.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Prakt0\CMakeFiles\Prakt0.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prakt0\Prakt0.exe
+  TARGET_IMPLIB = Prakt0\libPrakt0.dll.a
+  TARGET_PDB = Prakt0.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Prakt0/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt0 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Prakt0/edit_cache: phony Prakt0/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Prakt0/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt0 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Malinka\CLionProjects\Algorithms -BC:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Prakt0/rebuild_cache: phony Prakt0/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Prakt2_1
+
+
+#############################################
+# Order-only phony target for Prakt2_1
+
+build cmake_object_order_depends_target_Prakt2_1: phony || .
+
+build Prakt2/1/CMakeFiles/Prakt2_1.dir/main.cpp.obj: CXX_COMPILER__Prakt2_1_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/1/main.cpp || cmake_object_order_depends_target_Prakt2_1
+  DEP_FILE = Prakt2\1\CMakeFiles\Prakt2_1.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt2\1\CMakeFiles\Prakt2_1.dir
+  OBJECT_FILE_DIR = Prakt2\1\CMakeFiles\Prakt2_1.dir
+
+build Prakt2/1/CMakeFiles/Prakt2_1.dir/__/functions.cpp.obj: CXX_COMPILER__Prakt2_1_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/functions.cpp || cmake_object_order_depends_target_Prakt2_1
+  DEP_FILE = Prakt2\1\CMakeFiles\Prakt2_1.dir\__\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt2\1\CMakeFiles\Prakt2_1.dir
+  OBJECT_FILE_DIR = Prakt2\1\CMakeFiles\Prakt2_1.dir\__
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prakt2_1
+
+
+#############################################
+# Link the executable Prakt2\1\Prakt2_1.exe
+
+build Prakt2/1/Prakt2_1.exe: CXX_EXECUTABLE_LINKER__Prakt2_1_Debug Prakt2/1/CMakeFiles/Prakt2_1.dir/main.cpp.obj Prakt2/1/CMakeFiles/Prakt2_1.dir/__/functions.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Prakt2\1\CMakeFiles\Prakt2_1.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prakt2\1\Prakt2_1.exe
+  TARGET_IMPLIB = Prakt2\1\libPrakt2_1.dll.a
+  TARGET_PDB = Prakt2_1.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Prakt2/1/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt2\1 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Prakt2/1/edit_cache: phony Prakt2/1/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Prakt2/1/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt2\1 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Malinka\CLionProjects\Algorithms -BC:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Prakt2/1/rebuild_cache: phony Prakt2/1/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Prakt2_2
+
+
+#############################################
+# Order-only phony target for Prakt2_2
+
+build cmake_object_order_depends_target_Prakt2_2: phony || .
+
+build Prakt2/2/CMakeFiles/Prakt2_2.dir/main.cpp.obj: CXX_COMPILER__Prakt2_2_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/2/main.cpp || cmake_object_order_depends_target_Prakt2_2
+  DEP_FILE = Prakt2\2\CMakeFiles\Prakt2_2.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt2\2\CMakeFiles\Prakt2_2.dir
+  OBJECT_FILE_DIR = Prakt2\2\CMakeFiles\Prakt2_2.dir
+
+build Prakt2/2/CMakeFiles/Prakt2_2.dir/__/functions.cpp.obj: CXX_COMPILER__Prakt2_2_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/functions.cpp || cmake_object_order_depends_target_Prakt2_2
+  DEP_FILE = Prakt2\2\CMakeFiles\Prakt2_2.dir\__\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt2\2\CMakeFiles\Prakt2_2.dir
+  OBJECT_FILE_DIR = Prakt2\2\CMakeFiles\Prakt2_2.dir\__
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prakt2_2
+
+
+#############################################
+# Link the executable Prakt2\2\Prakt2_2.exe
+
+build Prakt2/2/Prakt2_2.exe: CXX_EXECUTABLE_LINKER__Prakt2_2_Debug Prakt2/2/CMakeFiles/Prakt2_2.dir/main.cpp.obj Prakt2/2/CMakeFiles/Prakt2_2.dir/__/functions.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Prakt2\2\CMakeFiles\Prakt2_2.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prakt2\2\Prakt2_2.exe
+  TARGET_IMPLIB = Prakt2\2\libPrakt2_2.dll.a
+  TARGET_PDB = Prakt2_2.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Prakt2/2/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt2\2 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Prakt2/2/edit_cache: phony Prakt2/2/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Prakt2/2/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt2\2 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Malinka\CLionProjects\Algorithms -BC:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Prakt2/2/rebuild_cache: phony Prakt2/2/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Prakt2_3
+
+
+#############################################
+# Order-only phony target for Prakt2_3
+
+build cmake_object_order_depends_target_Prakt2_3: phony || .
+
+build Prakt2/3/CMakeFiles/Prakt2_3.dir/main.cpp.obj: CXX_COMPILER__Prakt2_3_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/3/main.cpp || cmake_object_order_depends_target_Prakt2_3
+  DEP_FILE = Prakt2\3\CMakeFiles\Prakt2_3.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt2\3\CMakeFiles\Prakt2_3.dir
+  OBJECT_FILE_DIR = Prakt2\3\CMakeFiles\Prakt2_3.dir
+
+build Prakt2/3/CMakeFiles/Prakt2_3.dir/functions.cpp.obj: CXX_COMPILER__Prakt2_3_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/3/functions.cpp || cmake_object_order_depends_target_Prakt2_3
+  DEP_FILE = Prakt2\3\CMakeFiles\Prakt2_3.dir\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt2\3\CMakeFiles\Prakt2_3.dir
+  OBJECT_FILE_DIR = Prakt2\3\CMakeFiles\Prakt2_3.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prakt2_3
+
+
+#############################################
+# Link the executable Prakt2\3\Prakt2_3.exe
+
+build Prakt2/3/Prakt2_3.exe: CXX_EXECUTABLE_LINKER__Prakt2_3_Debug Prakt2/3/CMakeFiles/Prakt2_3.dir/main.cpp.obj Prakt2/3/CMakeFiles/Prakt2_3.dir/functions.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Prakt2\3\CMakeFiles\Prakt2_3.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prakt2\3\Prakt2_3.exe
+  TARGET_IMPLIB = Prakt2\3\libPrakt2_3.dll.a
+  TARGET_PDB = Prakt2_3.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Prakt2/3/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt2\3 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Prakt2/3/edit_cache: phony Prakt2/3/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Prakt2/3/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt2\3 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Malinka\CLionProjects\Algorithms -BC:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Prakt2/3/rebuild_cache: phony Prakt2/3/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Prakt3
+
+
+#############################################
+# Order-only phony target for Prakt3
+
+build cmake_object_order_depends_target_Prakt3: phony || .
+
+build Prakt3/CMakeFiles/Prakt3.dir/main.cpp.obj: CXX_COMPILER__Prakt3_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt3/main.cpp || cmake_object_order_depends_target_Prakt3
+  DEP_FILE = Prakt3\CMakeFiles\Prakt3.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt3\CMakeFiles\Prakt3.dir
+  OBJECT_FILE_DIR = Prakt3\CMakeFiles\Prakt3.dir
+
+build Prakt3/CMakeFiles/Prakt3.dir/functions.cpp.obj: CXX_COMPILER__Prakt3_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt3/functions.cpp || cmake_object_order_depends_target_Prakt3
+  DEP_FILE = Prakt3\CMakeFiles\Prakt3.dir\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt3\CMakeFiles\Prakt3.dir
+  OBJECT_FILE_DIR = Prakt3\CMakeFiles\Prakt3.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prakt3
+
+
+#############################################
+# Link the executable Prakt3\Prakt3.exe
+
+build Prakt3/Prakt3.exe: CXX_EXECUTABLE_LINKER__Prakt3_Debug Prakt3/CMakeFiles/Prakt3.dir/main.cpp.obj Prakt3/CMakeFiles/Prakt3.dir/functions.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Prakt3\CMakeFiles\Prakt3.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prakt3\Prakt3.exe
+  TARGET_IMPLIB = Prakt3\libPrakt3.dll.a
+  TARGET_PDB = Prakt3.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Prakt3/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt3 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Prakt3/edit_cache: phony Prakt3/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Prakt3/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt3 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Malinka\CLionProjects\Algorithms -BC:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Prakt3/rebuild_cache: phony Prakt3/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Prakt4
+
+
+#############################################
+# Order-only phony target for Prakt4
+
+build cmake_object_order_depends_target_Prakt4: phony || .
+
+build Prakt4/CMakeFiles/Prakt4.dir/main.cpp.obj: CXX_COMPILER__Prakt4_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4/main.cpp || cmake_object_order_depends_target_Prakt4
+  DEP_FILE = Prakt4\CMakeFiles\Prakt4.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt4\CMakeFiles\Prakt4.dir
+  OBJECT_FILE_DIR = Prakt4\CMakeFiles\Prakt4.dir
+
+build Prakt4/CMakeFiles/Prakt4.dir/functions.cpp.obj: CXX_COMPILER__Prakt4_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4/functions.cpp || cmake_object_order_depends_target_Prakt4
+  DEP_FILE = Prakt4\CMakeFiles\Prakt4.dir\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt4\CMakeFiles\Prakt4.dir
+  OBJECT_FILE_DIR = Prakt4\CMakeFiles\Prakt4.dir
+
+build Prakt4/CMakeFiles/Prakt4.dir/recursion.cpp.obj: CXX_COMPILER__Prakt4_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4/recursion.cpp || cmake_object_order_depends_target_Prakt4
+  DEP_FILE = Prakt4\CMakeFiles\Prakt4.dir\recursion.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt4\CMakeFiles\Prakt4.dir
+  OBJECT_FILE_DIR = Prakt4\CMakeFiles\Prakt4.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prakt4
+
+
+#############################################
+# Link the executable Prakt4\Prakt4.exe
+
+build Prakt4/Prakt4.exe: CXX_EXECUTABLE_LINKER__Prakt4_Debug Prakt4/CMakeFiles/Prakt4.dir/main.cpp.obj Prakt4/CMakeFiles/Prakt4.dir/functions.cpp.obj Prakt4/CMakeFiles/Prakt4.dir/recursion.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Prakt4\CMakeFiles\Prakt4.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prakt4\Prakt4.exe
+  TARGET_IMPLIB = Prakt4\libPrakt4.dll.a
+  TARGET_PDB = Prakt4.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Prakt4/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt4 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Prakt4/edit_cache: phony Prakt4/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Prakt4/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt4 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Malinka\CLionProjects\Algorithms -BC:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Prakt4/rebuild_cache: phony Prakt4/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Prakt4_3
+
+
+#############################################
+# Order-only phony target for Prakt4_3
+
+build cmake_object_order_depends_target_Prakt4_3: phony || .
+
+build Prakt4_3/CMakeFiles/Prakt4_3.dir/main.cpp.obj: CXX_COMPILER__Prakt4_3_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4_3/main.cpp || cmake_object_order_depends_target_Prakt4_3
+  DEP_FILE = Prakt4_3\CMakeFiles\Prakt4_3.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt4_3\CMakeFiles\Prakt4_3.dir
+  OBJECT_FILE_DIR = Prakt4_3\CMakeFiles\Prakt4_3.dir
+
+build Prakt4_3/CMakeFiles/Prakt4_3.dir/functions.cpp.obj: CXX_COMPILER__Prakt4_3_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4_3/functions.cpp || cmake_object_order_depends_target_Prakt4_3
+  DEP_FILE = Prakt4_3\CMakeFiles\Prakt4_3.dir\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt4_3\CMakeFiles\Prakt4_3.dir
+  OBJECT_FILE_DIR = Prakt4_3\CMakeFiles\Prakt4_3.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prakt4_3
+
+
+#############################################
+# Link the executable Prakt4_3\Prakt4_3.exe
+
+build Prakt4_3/Prakt4_3.exe: CXX_EXECUTABLE_LINKER__Prakt4_3_Debug Prakt4_3/CMakeFiles/Prakt4_3.dir/main.cpp.obj Prakt4_3/CMakeFiles/Prakt4_3.dir/functions.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Prakt4_3\CMakeFiles\Prakt4_3.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prakt4_3\Prakt4_3.exe
+  TARGET_IMPLIB = Prakt4_3\libPrakt4_3.dll.a
+  TARGET_PDB = Prakt4_3.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Prakt4_3/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt4_3 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Prakt4_3/edit_cache: phony Prakt4_3/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Prakt4_3/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt4_3 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Malinka\CLionProjects\Algorithms -BC:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Prakt4_3/rebuild_cache: phony Prakt4_3/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Prakt5
+
+
+#############################################
+# Order-only phony target for Prakt5
+
+build cmake_object_order_depends_target_Prakt5: phony || .
+
+build Prakt5/CMakeFiles/Prakt5.dir/main.cpp.obj: CXX_COMPILER__Prakt5_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt5/main.cpp || cmake_object_order_depends_target_Prakt5
+  DEP_FILE = Prakt5\CMakeFiles\Prakt5.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt5\CMakeFiles\Prakt5.dir
+  OBJECT_FILE_DIR = Prakt5\CMakeFiles\Prakt5.dir
+
+build Prakt5/CMakeFiles/Prakt5.dir/functions.cpp.obj: CXX_COMPILER__Prakt5_unscanned_Debug C$:/Users/Malinka/CLionProjects/Algorithms/Prakt5/functions.cpp || cmake_object_order_depends_target_Prakt5
+  DEP_FILE = Prakt5\CMakeFiles\Prakt5.dir\functions.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = Prakt5\CMakeFiles\Prakt5.dir
+  OBJECT_FILE_DIR = Prakt5\CMakeFiles\Prakt5.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prakt5
+
+
+#############################################
+# Link the executable Prakt5\Prakt5.exe
+
+build Prakt5/Prakt5.exe: CXX_EXECUTABLE_LINKER__Prakt5_Debug Prakt5/CMakeFiles/Prakt5.dir/main.cpp.obj Prakt5/CMakeFiles/Prakt5.dir/functions.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Prakt5\CMakeFiles\Prakt5.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prakt5\Prakt5.exe
+  TARGET_IMPLIB = Prakt5\libPrakt5.dll.a
+  TARGET_PDB = Prakt5.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Prakt5/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt5 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Prakt5/edit_cache: phony Prakt5/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Prakt5/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug\Prakt5 && C:\Users\Malinka\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Malinka\CLionProjects\Algorithms -BC:\Users\Malinka\CLionProjects\Algorithms\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Prakt5/rebuild_cache: phony Prakt5/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
-build Algorithms: phony Algorithms.exe
+build Prakt0: phony Prakt0/Prakt0.exe
+
+build Prakt0.exe: phony Prakt0/Prakt0.exe
+
+build Prakt2_1: phony Prakt2/1/Prakt2_1.exe
+
+build Prakt2_1.exe: phony Prakt2/1/Prakt2_1.exe
+
+build Prakt2_2: phony Prakt2/2/Prakt2_2.exe
+
+build Prakt2_2.exe: phony Prakt2/2/Prakt2_2.exe
+
+build Prakt2_3: phony Prakt2/3/Prakt2_3.exe
+
+build Prakt2_3.exe: phony Prakt2/3/Prakt2_3.exe
+
+build Prakt3: phony Prakt3/Prakt3.exe
+
+build Prakt3.exe: phony Prakt3/Prakt3.exe
+
+build Prakt4: phony Prakt4/Prakt4.exe
+
+build Prakt4.exe: phony Prakt4/Prakt4.exe
+
+build Prakt4_3: phony Prakt4_3/Prakt4_3.exe
+
+build Prakt4_3.exe: phony Prakt4_3/Prakt4_3.exe
+
+build Prakt5: phony Prakt5/Prakt5.exe
+
+build Prakt5.exe: phony Prakt5/Prakt5.exe
 
 # =============================================================================
 # Folder targets.
@@ -115,7 +648,63 @@ build Algorithms: phony Algorithms.exe
 #############################################
 # Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug
 
-build all: phony Algorithms.exe
+build all: phony Prakt0/all Prakt2/1/all Prakt2/2/all Prakt2/3/all Prakt3/all Prakt4/all Prakt4_3/all Prakt5/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt0
+
+build Prakt0/all: phony Prakt0/Prakt0.exe
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/1
+
+build Prakt2/1/all: phony Prakt2/1/Prakt2_1.exe
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/2
+
+build Prakt2/2/all: phony Prakt2/2/Prakt2_2.exe
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt2/3
+
+build Prakt2/3/all: phony Prakt2/3/Prakt2_3.exe
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt3
+
+build Prakt3/all: phony Prakt3/Prakt3.exe
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt4
+
+build Prakt4/all: phony Prakt4/Prakt4.exe
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt4_3
+
+build Prakt4_3/all: phony Prakt4_3/Prakt4_3.exe
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt5
+
+build Prakt5/all: phony Prakt5/Prakt5.exe
 
 # =============================================================================
 # Built-in targets
@@ -124,14 +713,14 @@ build all: phony Algorithms.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt0/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/1/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/2/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/3/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt3/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4_3/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt5/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
+build C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Users/Malinka/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Malinka/CLionProjects/Algorithms/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt0/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/1/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/2/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt2/3/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt3/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt4_3/CMakeLists.txt C$:/Users/Malinka/CLionProjects/Algorithms/Prakt5/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
 
 
 #############################################
