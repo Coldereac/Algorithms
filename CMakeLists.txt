@@ -24,3 +24,6 @@ add_subdirectory(
 add_subdirectory(
         Prakt5
 )
+add_subdirectory(
+        Indiv1
+)
