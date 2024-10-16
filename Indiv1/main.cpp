@@ -14,25 +14,25 @@ int main() {
 
         switch (choice) {
             case 1:
-                handleLoadData(countryList);
+                handleLoadData(&countryList);
                 break;
             case 2:
-                handleAddCountry(countryList);
+                handleAddCountry(&countryList);
                 break;
             case 3:
-                handleAddTeam(countryList);
+                handleAddTeam(&countryList);
                 break;
             case 4:
-                handleRemoveCountry(countryList);
+                handleRemoveCountry(&countryList);
                 break;
             case 5:
-                handleRemoveTeam(countryList);
+                handleRemoveTeam(&countryList);
                 break;
             case 6:
-                handleDisplayCountriesAndTeams(countryList);
+                handleDisplayCountriesAndTeams(&countryList);
                 break;
             case 7:
-                handleSaveData(countryList);
+                handleSaveData(&countryList);
                 break;
             case 8:
                 cout << "Exiting program.\n";

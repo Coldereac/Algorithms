@@ -12,19 +12,19 @@
 #define TEAMSFILE "textFiles/teams.txt"
 
 
-void handleLoadData(CountryList &countryList);
+void handleLoadData(CountryList *countryList);
 
-void handleAddCountry(CountryList &countryList);
+void handleAddCountry(CountryList *countryList);
 
-void handleAddTeam(const CountryList &countryList);
+void handleAddTeam(const CountryList *countryList);
 
-void handleRemoveCountry(CountryList &countryList);
+void handleRemoveCountry(CountryList *countryList);
 
-void handleRemoveTeam(const CountryList &countryList);
+void handleRemoveTeam(const CountryList *countryList);
 
-void handleDisplayCountriesAndTeams(const CountryList &countryList);
+void handleDisplayCountriesAndTeams(const CountryList *countryList);
 
-void handleSaveData(const CountryList &countryList);
+void handleSaveData(const CountryList *countryList);
 
 int printMenu();
 

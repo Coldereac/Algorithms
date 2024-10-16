@@ -2,26 +2,28 @@
 
 using namespace std;
 
-void handleLoadData(CountryList &countryList) {
-    if (countryList.loadFromFile(COUNTRIESFILE, TEAMSFILE) == 0) {
+
+
+void handleLoadData(CountryList *countryList) {
+    if (countryList->loadFromFile(COUNTRIESFILE, TEAMSFILE) == 0) {
         cout << "Data loaded successfully.\n";
     } else {
         cout << "Error loading data.\n";
     }
 }
 
-void handleAddCountry(CountryList &countryList) {
+void handleAddCountry(CountryList *countryList) {
     string countryName;
     cout << "Enter country name: ";
     cin >> countryName;
-    if (countryList.addCountry(countryName) == 0) {
+    if (countryList->addCountry(countryName) == 0) {
         cout << "Country added successfully.\n";
     } else {
         cout << "Error: Country already exists.\n";
     }
 }
 
-void handleAddTeam(const CountryList &countryList) {
+void handleAddTeam(const CountryList *countryList) {
     string countryName, teamName;
     int rank;
     cout << "Enter country name: ";
@@ -30,55 +32,57 @@ void handleAddTeam(const CountryList &countryList) {
     cin >> teamName;
     cout << "Enter team rank: ";
     cin >> rank;
-    if (countryList.addTeam(countryName, teamName, rank) == 0) {
+    if (countryList->addTeam(countryName, teamName, rank-1) == 0) {
         cout << "Team added successfully.\n";
+        countryList->recalculateRanks();
     } else {
         cout << "Error: Could not add team.\n";
     }
 }
 
-void handleRemoveCountry(CountryList &countryList) {
+void handleRemoveCountry(CountryList *countryList) {
     string countryName;
     cout << "Enter country name to remove: ";
     cin >> countryName;
-    if (countryList.removeCountry(countryName) == 0) {
+    if (countryList->removeCountry(countryName) == 0) {
         cout << "Country removed successfully.\n";
     } else {
         cout << "Error: Country not found.\n";
     }
 }
 
-void handleRemoveTeam(const CountryList &countryList) {
+void handleRemoveTeam(const CountryList *countryList) {
     string countryName, teamName;
     cout << "Enter country name: ";
     cin >> countryName;
     cout << "Enter team name to remove: ";
     cin >> teamName;
-    if (countryList.removeTeam(countryName, teamName) == 0) {
+    if (countryList->removeTeam(countryName, teamName) == 0) {
         cout << "Team removed successfully.\n";
+        countryList->recalculateRanks();
     } else {
         cout << "Error: Team not found.\n";
     }
 }
 
-void handleDisplayCountriesAndTeams(const CountryList &countryList) {
-    countryList.displayCountriesAndTeams();
+void handleDisplayCountriesAndTeams(const CountryList *countryList) {
+    countryList->displayCountriesAndTeams();
 }
 
-void handleEditCountry(CountryList& countryList) {
+void handleEditCountry(CountryList *countryList) {
     string oldName, newName;
     cout << "Enter the current country name: ";
     cin >> oldName;
     cout << "Enter the new country name: ";
     cin >> newName;
-    if (countryList.editCountry(oldName, newName) == 0) {
+    if (countryList->editCountry(oldName, newName) == 0) {
         cout << "Country updated successfully.\n";
     } else {
         cout << "Error: Country not found.\n";
     }
 }
 
-void handleEditTeam(CountryList& countryList) {
+void handleEditTeam(CountryList *countryList) {
     string countryName, oldTeamName, newTeamName;
     int newRank;
     cout << "Enter the country name: ";
@@ -89,8 +93,9 @@ void handleEditTeam(CountryList& countryList) {
     cin >> newTeamName;
     cout << "Enter the new team rank: ";
     cin >> newRank;
-    if (countryList.editTeam(countryName, oldTeamName, newTeamName, newRank) == 0) {
+    if (countryList->editTeam(countryName, oldTeamName, newTeamName, newRank) == 0) {
         cout << "Team updated successfully.\n";
+        countryList->recalculateRanks();
     } else {
         cout << "Error: Team or country not found.\n";
     }
@@ -98,8 +103,8 @@ void handleEditTeam(CountryList& countryList) {
 }
 
 
-void handleSaveData(const CountryList &countryList) {
-    if (countryList.saveToFile(COUNTRIESFILE, TEAMSFILE) == 0) {
+void handleSaveData(const CountryList *countryList) {
+    if (countryList->saveToFile(COUNTRIESFILE, TEAMSFILE) == 0) {
         cout << "Data saved successfully.\n";
     } else {
         cout << "Error saving data.\n";

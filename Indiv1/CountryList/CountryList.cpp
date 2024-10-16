@@ -1,8 +1,11 @@
 #include "CountryList.h"
+
+#include <algorithm>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -14,6 +17,7 @@ Country::Country(string n) : name(std::move(n)), teamList(nullptr), next(nullptr
 
 CountryList::CountryList() : head(nullptr) {
 }
+
 
 int CountryList::addTeamToCountry(Country *country, const string &teamName, int rank) {
     Team *newTeam = new Team(teamName, rank);
@@ -42,10 +46,19 @@ Country *CountryList::findCountry(const string &countryName) const {
     return nullptr;
 }
 
-Team *CountryList::findTeam(Country *country, const string &teamName) {
+Team *CountryList::findTeamByName(Country *country, const string &teamName) {
     Team *current = country->teamList;
     while (current) {
         if (current->name == teamName) return current;
+        current = current->next;
+    }
+    return nullptr;
+}
+
+Team *CountryList::findTeamByRank(Country *country, const int rank) {
+    Team *current = country->teamList;
+    while (current) {
+        if (current->rank == rank) return current;
         current = current->next;
     }
     return nullptr;
@@ -155,7 +168,7 @@ int CountryList::editTeam(const string &countryName, const string &oldTeamName, 
     Country *country = findCountry(countryName);
     if (!country) return 1; // Країна не знайдена
 
-    Team *team = findTeam(country, oldTeamName);
+    Team *team = findTeamByName(country, oldTeamName);
     if (!team) return 2; // Команда не знайдена
 
     team->name = newTeamName;
@@ -201,7 +214,7 @@ void CountryList::displayTeam(const string &countryName, const string &teamName)
         return;
     }
 
-    Team *team = findTeam(country, teamName);
+    Team *team = findTeamByName(country, teamName);
     if (!team) {
         cout << "Team not found.\n";
         return;
@@ -221,7 +234,6 @@ int CountryList::getTeamRank(Team *teamList, const string &teamName) {
     return -1; //Не знайдена така команда
 }
 
-//Передбачаеться, що список команд у countriesFile вже відсортований за зростанням
 int CountryList::loadFromFile(const string &countriesFile, const string &teamsFile) {
     ifstream inFile(countriesFile);
     if (!inFile) {
@@ -332,4 +344,30 @@ int CountryList::saveToFile(const string &countriesFile, const string &teamsFile
     outFileTeams.close();
 
     return 0; // Успішно
+}
+
+void CountryList::recalculateRanks() const {
+    Country *currentCountry = head;
+    vector<Team *> teamList;
+    while (currentCountry != nullptr) {
+        // Собираем все команды текущей страны
+        Team *currentTeam = currentCountry->teamList;
+        while (currentTeam != nullptr) {
+            teamList.push_back(currentTeam);
+            currentTeam = currentTeam->next;
+        }
+
+        currentCountry = currentCountry->next;
+    }
+    // Сортируем команды по их текущему рангу
+    sort(teamList.begin(), teamList.end(), [](Team *a, Team *b) {
+        return a->rank < b->rank;
+    });
+
+    // Присваиваем новые ранги начиная с 1
+    int newRank = 1;
+    for (auto &team: teamList) {
+        team->rank = newRank;
+        newRank++;
+    }
 }

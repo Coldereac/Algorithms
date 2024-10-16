@@ -30,9 +30,13 @@ private:
 
     Country *findCountry(const string &countryName) const;
 
-    static Team *findTeam(Country *country, const string &teamName);
+    static Team *findTeamByName(Country *country, const string &teamName);
 
     static int getTeamRank(Team *teamList, const string &countryName) ;
+
+    static Team *findTeamByRank(Country *country, int rank);
+
+
 
 public:
     CountryList();
@@ -57,9 +61,9 @@ public:
 
     int loadFromFile(const string &countriesFile, const string &teamsFile);
 
-
-
     int saveToFile(const string &countriesFile, const string &teamsFile) const;
+
+    void recalculateRanks() const;
 };
 
 #endif // COUNTRYLIST_H
