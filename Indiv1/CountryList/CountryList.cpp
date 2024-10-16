@@ -18,6 +18,10 @@ Country::Country(string n) : name(std::move(n)), teamList(nullptr), next(nullptr
 CountryList::CountryList() : head(nullptr) {
 }
 
+Country *CountryList::getHead() const {
+    return head;
+}
+
 
 int CountryList::addTeamToCountry(Country *country, const string &teamName, int rank) {
     Team *newTeam = new Team(teamName, rank);
@@ -46,20 +50,28 @@ Country *CountryList::findCountry(const string &countryName) const {
     return nullptr;
 }
 
-Team *CountryList::findTeamByName(Country *country, const string &teamName) {
-    Team *current = country->teamList;
-    while (current) {
-        if (current->name == teamName) return current;
-        current = current->next;
+Team *CountryList::findTeamByName(const string &teamName, const Country *country) const {
+    if (!country) country = head;
+    while (country) {
+        Team *current = country->teamList;
+        while (current) {
+            if (current->name == teamName) return current;
+            current = current->next;
+        }
+        country = country->next;
     }
     return nullptr;
 }
 
-Team *CountryList::findTeamByRank(Country *country, const int rank) {
-    Team *current = country->teamList;
-    while (current) {
-        if (current->rank == rank) return current;
-        current = current->next;
+Team *CountryList::findTeamByRank(const int rank, const Country *country) const {
+    if (!country) country = head;
+    while (country) {
+        Team *current = country->teamList;
+        while (current) {
+            if (current->rank == rank) return current;
+            current = current->next;
+        }
+        country = country->next;
     }
     return nullptr;
 }
@@ -163,63 +175,35 @@ int CountryList::editCountry(const string &oldName, const string &newName) {
 }
 
 // Редагування команди
-int CountryList::editTeam(const string &countryName, const string &oldTeamName, const string &newTeamName,
-                          int newRank) {
-    Country *country = findCountry(countryName);
-    if (!country) return 1; // Країна не знайдена
-
-    Team *team = findTeamByName(country, oldTeamName);
-    if (!team) return 2; // Команда не знайдена
-
+int CountryList::editTeamName(const string &newTeamName, Team *team) {
     team->name = newTeamName;
-    team->rank = newRank;
     return 0; // Успішно
 }
 
+int CountryList::editTeamRank(const int newRank, Team *team) {
+    team->rank = newRank;
+    return 0;
+}
+
 // Виведення усіх країн та команд
-void CountryList::displayCountriesAndTeams() const {
+void CountryList::displayCountries(Country *head) {
     Country *currentCountry = head;
     while (currentCountry) {
-        cout << "Country: " << currentCountry->name << endl;
-        Team *currentTeam = currentCountry->teamList;
-        while (currentTeam) {
-            cout << "  Team: " << currentTeam->name << ", Rank: " << currentTeam->rank << endl;
-            currentTeam = currentTeam->next;
-        }
+        displayCountry(currentCountry);
         currentCountry = currentCountry->next;
     }
 }
 
-// Виведення конкретної країни
-void CountryList::displayCountry(const string &countryName) const {
-    Country *country = findCountry(countryName);
-    if (!country) {
-        cout << "Country not found.\n";
-        return;
-    }
-
+void CountryList::displayCountry(Country *country) {
     cout << "Country: " << country->name << endl;
     Team *currentTeam = country->teamList;
     while (currentTeam) {
-        cout << "  Team: " << currentTeam->name << ", Rank: " << currentTeam->rank << endl;
+        displayTeam(currentTeam);
         currentTeam = currentTeam->next;
     }
 }
 
-// Виведення конкретної команди
-void CountryList::displayTeam(const string &countryName, const string &teamName) const {
-    Country *country = findCountry(countryName);
-    if (!country) {
-        cout << "Country not found.\n";
-        return;
-    }
-
-    Team *team = findTeamByName(country, teamName);
-    if (!team) {
-        cout << "Team not found.\n";
-        return;
-    }
-
+void CountryList::displayTeam(Team *team) {
     cout << "Team: " << team->name << ", Rank: " << team->rank << endl;
 }
 
@@ -350,7 +334,6 @@ void CountryList::recalculateRanks() const {
     Country *currentCountry = head;
     vector<Team *> teamList;
     while (currentCountry != nullptr) {
-        // Собираем все команды текущей страны
         Team *currentTeam = currentCountry->teamList;
         while (currentTeam != nullptr) {
             teamList.push_back(currentTeam);
@@ -359,12 +342,10 @@ void CountryList::recalculateRanks() const {
 
         currentCountry = currentCountry->next;
     }
-    // Сортируем команды по их текущему рангу
     sort(teamList.begin(), teamList.end(), [](Team *a, Team *b) {
         return a->rank < b->rank;
     });
 
-    // Присваиваем новые ранги начиная с 1
     int newRank = 1;
     for (auto &team: teamList) {
         team->rank = newRank;

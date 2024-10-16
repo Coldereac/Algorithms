@@ -22,10 +22,17 @@ void handleRemoveCountry(CountryList *countryList);
 
 void handleRemoveTeam(const CountryList *countryList);
 
-void handleDisplayCountriesAndTeams(const CountryList *countryList);
+void handleEditTeam(CountryList *countryList);
+
+void handleEditCountry(CountryList *countryList);
+
+void findTeam(CountryList *countryList);
+
+void findCountry(CountryList *countryList);
 
 void handleSaveData(const CountryList *countryList);
 
-int printMenu();
+int mainMenu(CountryList *countryList);
+
 
 #endif //HANDLERS_H

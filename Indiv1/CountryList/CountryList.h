@@ -22,24 +22,22 @@ struct Country {
 };
 
 class CountryList {
-private:
     Country *head;
-
 
     static int addTeamToCountry(Country *country, const string &teamName, int rank);
 
-    Country *findCountry(const string &countryName) const;
-
-    static Team *findTeamByName(Country *country, const string &teamName);
-
-    static int getTeamRank(Team *teamList, const string &countryName) ;
-
-    static Team *findTeamByRank(Country *country, int rank);
-
-
+    static int getTeamRank(Team *teamList, const string &countryName);
 
 public:
     CountryList();
+
+    Country *getHead() const;
+
+    Team *findTeamByName(const string &teamName, const Country *country = nullptr) const;
+
+    Team *findTeamByRank(int rank, const Country *country = nullptr) const;
+
+    Country *findCountry(const string &countryName) const;
 
     int addCountry(const string &countryName);
 
@@ -51,13 +49,15 @@ public:
 
     int editCountry(const string &oldName, const string &newName);
 
-    int editTeam(const string &countryName, const string &oldTeamName, const string &newTeamName, int newRank);
+    static int editTeamName(const string &newTeamName, Team *team);
 
-    void displayCountriesAndTeams() const;
+    static int editTeamRank(int newRank, Team *team);
 
-    void displayCountry(const string &countryName) const;
+    static void displayCountries(Country *head);
 
-    void displayTeam(const string &countryName, const string &teamName) const;
+    static void displayCountry(Country *country);
+
+    static void displayTeam(Team *team);
 
     int loadFromFile(const string &countriesFile, const string &teamsFile);
 

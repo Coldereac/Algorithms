@@ -1,12 +1,10 @@
 Zorya
-Dynamo
 Bayern
-Test1
 Marseille
 BorussiaLeipzig
+Dynamo
 RealMadrid
 Atletico
 Shakhtar
 PSG
 Barcelona
-Test
