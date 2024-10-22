@@ -27,3 +27,9 @@
 /home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv1/CMakeFiles/Indiv1.dir
 /home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv1/CMakeFiles/edit_cache.dir
 /home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv1/CMakeFiles/rebuild_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt6/CMakeFiles/Prakt6.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt6/CMakeFiles/edit_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt6/CMakeFiles/rebuild_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt7/CMakeFiles/Prakt7.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt7/CMakeFiles/edit_cache.dir
+/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt7/CMakeFiles/rebuild_cache.dir

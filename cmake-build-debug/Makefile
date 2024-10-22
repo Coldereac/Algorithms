@@ -246,6 +246,19 @@ Prakt6/fast:
 	$(MAKE) $(MAKESILENT) -f Prakt6/CMakeFiles/Prakt6.dir/build.make Prakt6/CMakeFiles/Prakt6.dir/build
 .PHONY : Prakt6/fast
 
+#=============================================================================
+# Target rules for targets named Prakt7
+
+# Build rule for target.
+Prakt7: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt7
+.PHONY : Prakt7
+
+# fast build rule for target.
+Prakt7/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt7/CMakeFiles/Prakt7.dir/build.make Prakt7/CMakeFiles/Prakt7.dir/build
+.PHONY : Prakt7/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -264,6 +277,7 @@ help:
 	@echo "... Prakt4_3"
 	@echo "... Prakt5"
 	@echo "... Prakt6"
+	@echo "... Prakt7"
 .PHONY : help
 
 

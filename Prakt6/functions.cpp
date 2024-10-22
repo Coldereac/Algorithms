@@ -46,7 +46,7 @@ int displayReverse(tree *t) {
 
 int countElem(tree *t, int elem) {
     if (t == nullptr) return 0;
-    if (elem == 0) return 0;
+    if (elem == 0) return -1;
     int count = (t->data == elem) ? 1 : 0;
     count += countElem(t->left, elem);
     count += countElem(t->right, elem);
