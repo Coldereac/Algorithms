@@ -233,6 +233,19 @@ Indiv1/fast:
 	$(MAKE) $(MAKESILENT) -f Indiv1/CMakeFiles/Indiv1.dir/build.make Indiv1/CMakeFiles/Indiv1.dir/build
 .PHONY : Indiv1/fast
 
+#=============================================================================
+# Target rules for targets named Prakt6
+
+# Build rule for target.
+Prakt6: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt6
+.PHONY : Prakt6
+
+# fast build rule for target.
+Prakt6/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt6/CMakeFiles/Prakt6.dir/build.make Prakt6/CMakeFiles/Prakt6.dir/build
+.PHONY : Prakt6/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -250,6 +263,7 @@ help:
 	@echo "... Prakt4"
 	@echo "... Prakt4_3"
 	@echo "... Prakt5"
+	@echo "... Prakt6"
 .PHONY : help
 
 

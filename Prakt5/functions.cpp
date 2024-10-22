@@ -1,13 +1,10 @@
-//
-// Created by Malinka on 10/3/2024.
-//
 #include <iostream>
 #include "functions.h"
 
 using namespace std;
 
 void menu() {
-    PNode list = nullptr;
+    PNode list = nullptr, tail = nullptr;
     int choice, value, beforeValue, afterValue;
 
     do {
@@ -25,24 +22,18 @@ void menu() {
 
         switch (choice) {
             case 1:
-                list = createList();
+                list = createList(&tail);
                 break;
             case 2:
                 printForward(list);
                 break;
             case 3:
-                if (list) {
-                    Node *tail = list;
-                    while (tail->next) {
-                        tail = tail->next;
-                    }
-                    printBackward(tail);
-                }
+                printBackward(tail);
                 break;
             case 4:
                 std::cout << "Enter value to delete: ";
                 std::cin >> value;
-                deleteNode(&list, value);
+                deleteNode(&list, &tail, value);
                 break;
             case 5:
                 std::cout << "Enter value before which to insert: ";
@@ -56,10 +47,10 @@ void menu() {
                 std::cin >> afterValue;
                 std::cout << "Enter new value: ";
                 std::cin >> value;
-                insertAfter(list, afterValue, value);
+                insertAfter(&list, &tail, afterValue, value);
                 break;
             case 7:
-                if (isSymmetric(list)) {
+                if (isSymmetric(list, tail)) {
                     std::cout << "List is symmetric.\n";
                 } else {
                     std::cout << "List is not symmetric.\n";
@@ -83,13 +74,8 @@ void freeMemory(PNode *node) {
     }
 }
 
-bool isSymmetric(PNode head) {
+bool isSymmetric(PNode head, PNode tail) {
     if (!head) return true;
-
-    Node *tail = head;
-    while (tail->next) {
-        tail = tail->next;
-    }
 
     while (head && tail && head != tail && head->prev != tail) {
         if (head->data != tail->data) return false;
@@ -116,22 +102,41 @@ void insertBefore(PNode *head, int beforeValue, int newValue) {
     if (current == *head) *head = newNode;
 }
 
-void insertAfter(PNode head, int afterValue, int newValue) {
-    Node *current = head;
+void insertAfter(PNode *head, PNode *tail, int afterValue, int newValue) {
+    PNode currentHead = *head;
 
-    while (current && current->data != afterValue) {
-        current = current->next;
+    if (afterValue == (*tail)->data) {
+        PNode newNode = new Node{};
+        newNode->data = newValue;
+        newNode->next = nullptr;
+        newNode->prev = *tail;
+        (*tail)->next = newNode;
+        *tail = newNode;
+
+        return;
     }
 
-    if (!current) return;
+    while (currentHead && currentHead->data != afterValue) {
+        currentHead = currentHead->next;
+    }
 
-    Node *newNode = new Node{newValue, current->next, current};
-    if (current->next) current->next->prev = newNode;
-    current->next = newNode;
+    if (!currentHead) return;
+
+    Node *newNode = new Node{newValue, currentHead->next, currentHead};
+    if (currentHead->next) currentHead->next->prev = newNode;
+    currentHead->next = newNode;
 }
 
-void deleteNode(PNode *head, int value) {
+void deleteNode(PNode *head, PNode *tail, int value) {
     PNode current = *head;
+
+    if (value == (*tail)->data) {
+        PNode toDelete = *tail;
+        (*tail) = (*tail)->prev;
+        (*tail)->next = nullptr;
+        delete toDelete;
+        return;
+    }
 
     while (current && current->data != value) {
         current = current->next;
@@ -165,9 +170,9 @@ void printBackward(PNode tail) {
     std::cout << std::endl;
 }
 
-PNode createList() {
-    Node *head = nullptr;
-    Node *tail = nullptr;
+PNode createList(PNode *tail) {
+    PNode head = nullptr;
+    *tail = nullptr;
     int value;
     char choice;
 
@@ -179,11 +184,11 @@ PNode createList() {
 
         if (!head) {
             head = newNode;
-            tail = newNode;
+            *tail = newNode;
         } else {
-            tail->next = newNode;
-            newNode->prev = tail;
-            tail = newNode;
+            (*tail)->next = newNode;
+            newNode->prev = *tail;
+            *tail = newNode;
         }
 
         std::cout << "Do you want to add another element? (y/n): ";
@@ -192,4 +197,3 @@ PNode createList() {
 
     return head;
 }
-
