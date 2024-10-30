@@ -33,3 +33,4 @@ add_subdirectory(
 add_subdirectory(
         Prakt7
 )
+add_subdirectory(Indiv1_correct)

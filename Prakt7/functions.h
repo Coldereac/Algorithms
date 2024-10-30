@@ -9,31 +9,31 @@
 
 using namespace std;
 
-struct student {
+struct Student {
     string name;
     float grade;
 
-    student(string &n, float s) : name(n), grade(s) {
+    Student(string &n, float s) : name(n), grade(s) {
     }
 };
 
 struct tree {
-    struct student student;
+    struct Student student;
     tree *left;
     tree *right;
 
-    tree(const struct student &_student) : student(_student), left(nullptr), right(nullptr) {
+    tree(const struct Student &_student) : student(_student), left(nullptr), right(nullptr) {
     }
 };
 
-tree *insertStudent(tree **t, const student &student);
+tree *insertStudent(tree **t, const Student &student);
 
-tree *deleteStudent(tree **t, student &toDelete);
+tree *deleteStudent(tree **t, Student &toDelete);
 
 tree *findMin(tree *t);
 
 // якщо дерево пусте return 1, інакше 0
-int findStudentsLessGrade(tree *t, float grade, vector<student> &result);
+int findStudentsLessGrade(tree *t, float grade, tree **result);
 
 tree *formTree();
 
@@ -42,7 +42,7 @@ void freeTree(tree **t);
 int displaySymmetrical(tree *t);
 
 // якщо студент nullptr return 1, інакше 0
-int displayStudent(student *student);
+int displayStudent(Student *student);
 
 
 #endif //FUNCTIONS_H

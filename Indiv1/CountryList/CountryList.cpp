@@ -12,7 +12,11 @@ using namespace std;
 Team::Team(string n = "", int r = 0) : name(std::move(n)), rank(r), next(nullptr) {
 }
 
-Country::Country(string n) : name(std::move(n)), teamList(nullptr), next(nullptr) {
+Country::Country(const string &n) : name(n), teamList(nullptr), next(nullptr) {
+}
+
+
+Country::Country(string &n) : name(n), teamList(nullptr), next(nullptr) {
 }
 
 CountryList::CountryList() : head(nullptr) {

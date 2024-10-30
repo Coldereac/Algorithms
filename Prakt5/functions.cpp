@@ -31,29 +31,29 @@ void menu() {
                 printBackward(tail);
                 break;
             case 4:
-                std::cout << "Enter value to delete: ";
-                std::cin >> value;
+                cout << "Enter value to delete: ";
+                 cin >> value;
                 deleteNode(&list, &tail, value);
                 break;
             case 5:
-                std::cout << "Enter value before which to insert: ";
-                std::cin >> beforeValue;
-                std::cout << "Enter new value: ";
-                std::cin >> value;
+                 cout << "Enter value before which to insert: ";
+                 cin >> beforeValue;
+                 cout << "Enter new value: ";
+                 cin >> value;
                 insertBefore(&list, beforeValue, value);
                 break;
             case 6:
-                std::cout << "Enter value after which to insert: ";
-                std::cin >> afterValue;
-                std::cout << "Enter new value: ";
-                std::cin >> value;
+                 cout << "Enter value after which to insert: ";
+                 cin >> afterValue;
+                 cout << "Enter new value: ";
+                 cin >> value;
                 insertAfter(&list, &tail, afterValue, value);
                 break;
             case 7:
                 if (isSymmetric(list, tail)) {
-                    std::cout << "List is symmetric.\n";
+                     cout << "List is symmetric.\n";
                 } else {
-                    std::cout << "List is not symmetric.\n";
+                     cout << "List is not symmetric.\n";
                 }
                 break;
             case 0:
@@ -155,19 +155,19 @@ void deleteNode(PNode *head, PNode *tail, int value) {
 void printForward(PNode head) {
     Node *current = head;
     while (current) {
-        std::cout << current->data << " ";
+         cout << current->data << " ";
         current = current->next;
     }
-    std::cout << std::endl;
+     cout <<  endl;
 }
 
 void printBackward(PNode tail) {
     Node *current = tail;
     while (current) {
-        std::cout << current->data << " ";
+         cout << current->data << " ";
         current = current->prev;
     }
-    std::cout << std::endl;
+     cout <<  endl;
 }
 
 PNode createList(PNode *tail) {
@@ -177,8 +177,8 @@ PNode createList(PNode *tail) {
     char choice;
 
     do {
-        std::cout << "Enter value: ";
-        std::cin >> value;
+         cout << "Enter value: ";
+         cin >> value;
 
         Node *newNode = new Node{value, nullptr, nullptr};
 
@@ -191,8 +191,8 @@ PNode createList(PNode *tail) {
             *tail = newNode;
         }
 
-        std::cout << "Do you want to add another element? (y/n): ";
-        std::cin >> choice;
+         cout << "Do you want to add another element? (y/n): ";
+         cin >> choice;
     } while (choice == 'y' || choice == 'Y');
 
     return head;

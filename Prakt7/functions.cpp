@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-tree *insertStudent(tree **t, const student &student) {
+tree *insertStudent(tree **t, const Student &student) {
     if (*t == nullptr) {
         *t = new tree(student);
         return *t;
@@ -17,7 +17,7 @@ tree *insertStudent(tree **t, const student &student) {
         (*t)->right = insertStudent(&(*t)->right, student);
     }
     return *t;
-};
+}
 
 tree *formTree() {
     tree *t = nullptr;
@@ -29,14 +29,14 @@ tree *formTree() {
         cin >> name;
         cout << "Enter student grade: ";
         cin >> grade;
-        insertStudent(&t, student(name, grade));
+        insertStudent(&t, Student(name, grade));
         cout << "Do you want to add another element to the tree [Yy\\Nn]: ";
         cin >> choice;
     } while (choice == 'Y' || choice == 'y');
     return t;
 }
 
-tree *deleteStudent(tree **t, student &toDelete) {
+tree *deleteStudent(tree **t, Student &toDelete) {
     if (*t == nullptr) {
         return nullptr;
     }
@@ -76,13 +76,13 @@ tree *findMin(tree *t) {
     return t;
 }
 
-int findStudentsLessGrade(tree *t, float grade, vector<student> &result) {
+int findStudentsLessGrade(tree *t, float grade, tree **result) {
     if (t == nullptr) {
         return 1;
     }
     findStudentsLessGrade(t->left, grade, result);
     if (grade > t->student.grade) {
-        result.push_back(t->student);
+        insertStudent(result, t->student);
     }
     findStudentsLessGrade(t->right, grade, result);
 
@@ -98,7 +98,7 @@ void freeTree(tree **t) {
     delete *t;
 }
 
-int displayStudent(student *student) {
+int displayStudent(Student *student) {
     if (student == nullptr) return 1;
     cout << "Name: " << student->name << "\nGrade: " << student->grade << endl;
     return 0;

@@ -16,17 +16,14 @@ int main() {
     cin >> name;
     cout << "Enter student grade: ";
     cin >> grade;
-    student student(name, grade);
+    Student student(name, grade);
     deleteStudent(&root, student);
     displaySymmetrical(root);
     cout << "Enter grade to find student with grade less than inputed: " << endl;
     cin >> grade;
-    vector<struct student> studentLessGrade;
-    findStudentsLessGrade(root, grade, studentLessGrade);
-    int size = studentLessGrade.size();
-    for (int i = 0; i < size; i++) {
-        displayStudent(&studentLessGrade[i]);
-    }
+    tree *studentLessGrade;
+    findStudentsLessGrade(root, grade, &studentLessGrade);
+    displaySymmetrical(studentLessGrade);
     freeTree(&root);
     return 0;
 }

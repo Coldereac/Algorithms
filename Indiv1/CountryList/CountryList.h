@@ -26,7 +26,8 @@ struct Country {
     Team *teamList;  // Вказівник на список команд у цій країні
     Country *next;   // Вказівник на наступну країну
 
-    Country(string n);  // Конструктор для ініціалізації назви країни
+    Country(const string &n);
+    Country(string &n);// Конструктор для ініціалізації назви країни
 };
 
 /**

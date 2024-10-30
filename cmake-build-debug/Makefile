@@ -259,6 +259,19 @@ Prakt7/fast:
 	$(MAKE) $(MAKESILENT) -f Prakt7/CMakeFiles/Prakt7.dir/build.make Prakt7/CMakeFiles/Prakt7.dir/build
 .PHONY : Prakt7/fast
 
+#=============================================================================
+# Target rules for targets named Indiv1_correct
+
+# Build rule for target.
+Indiv1_correct: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Indiv1_correct
+.PHONY : Indiv1_correct
+
+# fast build rule for target.
+Indiv1_correct/fast:
+	$(MAKE) $(MAKESILENT) -f Indiv1_correct/CMakeFiles/Indiv1_correct.dir/build.make Indiv1_correct/CMakeFiles/Indiv1_correct.dir/build
+.PHONY : Indiv1_correct/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -268,6 +281,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Indiv1"
+	@echo "... Indiv1_correct"
 	@echo "... Prakt0"
 	@echo "... Prakt2_1"
 	@echo "... Prakt2_2"
