@@ -7,7 +7,7 @@
 #define STARTFILECOUNTRIES "/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv1_correct/textFiles/countries.txt"
 #define STARTFILETEAMS "/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv1_correct/textFiles/teams.txt"
 
-#include "handlers/handlers.h"
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -17,7 +17,7 @@ using namespace std;
 struct Team {
     string name; //Назва(Унікальна)
     int rank; //Місце
-    int points; //Кількість очок у теперешньому раунді
+    int points; //Кількість очок у теперішньому раунді
     Team *next; // Посилання на наступну команду
 
     explicit Team(const string &n = "", int r = 0) : name(n), rank(r), points(0), next(nullptr) {
@@ -43,44 +43,50 @@ void saveCountriesToFile(const string &countriesFile, Country *countryList);
 
 void simulateRound(Team **teamList);
 
+void sortTeamList(Team **teamList);
+
 void refreshPlacements(Team **teamList);
 
 void transferToNewRound(Team **teamList);
 
-void removeTeamInCountry(Country **country, string &teamName);
+void removeTeamInCountry(Country **country, const string &teamName);
 
-int removeCountry(Country **countryList, string &countryName);
+void removeTeamFromTeamList(Team **teamList, const string &teamName);
+
+void deleteCountry(Country **countryList, const string &countryName);
 
 void addCountry(Country **countryList, Country *newCountry);
 
 void addTeamInCountry(Country **country, Team **teamList, Team *newTeam);
 
-Team *findTeamByName(Country *countryList, string &teamName);
+Team *findTeamByName(Team *teamList, const string &teamName);
 
-Team *findTeamByRank(Country *countryList, int rank);
+Team *findTeamByRank(Team *teamList, int rank);
 
-Team *findTeamByPoints(Country *countryList, int min, int max);
+Team *findTeamByPoints(Team *teamList, int min, int max);
 
-Country *findCountryByName(Country *countryList, string &countryName);
+Country *findCountryByName(Country *countryList, const string &countryName);
 
-Country *findCountryByTeam(Country *countryList, string &teamName);
+Country *findCountryByTeam(Country *countryList, const string &teamName);
 
 void syncTeams(Team *teamList, Country **countryList);
 
 void deleteCountriesWithoutTeams(Country **countryList);
 
-void sortTeamList(Team **teamList);
-
-void displayTeam(Team *team);
+void displayTeam(const Team *team);
 
 void displayTeamList(Team *teamList);
 
-void displayCountry(Country *country);
+void displayCountry(const Country *country);
 
-void displayCountryList(Country *countryList);
+void displayCountryList(const Country *countryList);
 
 int findRank(Team *teamList, const string &teamName);
 
-void justifyRanksAndPoints(Country **countryList, Team *teamList);
+int findPoints(Team *teamList, const string &teamName);
+
+void transferRanksAndPoints(Country **countryList, Team *teamList);
+
+void freeMemoryTeamList(Team **teamList);
 
 #endif //FUNCTIONS_H

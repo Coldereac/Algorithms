@@ -1,4 +1,4 @@
-France Marseille PSG
-Germany Bayern BorussiaLeipzig
-Spain RealMadrid Atletico Barcelona
-Ukraine Zorya Dynamo Shakhtar
+France Marseille PSG 
+Germany Bayern BorussiaLeipzig 
+Spain Barcelona RealMadrid Atletico
+Ukraine Dynamo Zorya Shakhtar 

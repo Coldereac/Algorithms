@@ -21,7 +21,7 @@ int main() {
     displaySymmetrical(root);
     cout << "Enter grade to find student with grade less than inputed: " << endl;
     cin >> grade;
-    tree *studentLessGrade;
+    tree *studentLessGrade = nullptr;
     findStudentsLessGrade(root, grade, &studentLessGrade);
     displaySymmetrical(studentLessGrade);
     freeTree(&root);

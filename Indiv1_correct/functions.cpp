@@ -16,7 +16,7 @@ Country *loadCountriesFromFile(const string &countriesFile) {
         stringstream ss(line);
         string countryName;
         ss >> countryName;
-        Country *newCountry = new Country(countryName);
+        auto newCountry = new Country(countryName);
         string teamName;
         Team *tempTeam = nullptr;
         while (ss >> teamName) {
@@ -74,9 +74,10 @@ void saveTeamsRanksToFile(const string &teamsFile, Team *teamList) {
     if (!outFileRanks) {
         throw invalid_argument("Teams file cannot be opened");
     }
-    while (teamList) {
-        outFileRanks << teamList->name << endl;
-        teamList = teamList->next;
+    Team *currentTeam = teamList;
+    while (currentTeam) {
+        outFileRanks << currentTeam->name << endl;
+        currentTeam = currentTeam->next;
     }
     outFileRanks.close();
 }
@@ -99,7 +100,7 @@ void saveCountriesToFile(const string &countriesFile, Country *countryList) {
     }
 }
 
-void displayTeam(Team *team) {
+void displayTeam(const Team *team) {
     if (team == nullptr) {
         return;
     }
@@ -119,7 +120,7 @@ void displayTeamList(Team *teamList) {
     }
 }
 
-void displayCountry(Country *country) {
+void displayCountry(const Country *country) {
     if (country == nullptr) {
         return;
     }
@@ -131,7 +132,7 @@ void displayCountry(Country *country) {
     }
 }
 
-void displayCountryList(Country *countryList) {
+void displayCountryList(const Country *countryList) {
     while (countryList) {
         try {
             displayCountry(countryList);
@@ -164,7 +165,7 @@ int findPoints(Team *teamList, const string &teamName) {
     return -1;
 }
 
-void justifyRanksAndPoints(Country **countryList, Team *teamList) {
+void transferRanksAndPoints(Country **countryList, Team *teamList) {
     Country *tempCountry = *countryList;
     while (tempCountry) {
         Team *tempTeam = tempCountry->teamList;
@@ -257,7 +258,7 @@ void refreshPlacements(Team **teamList) {
     }
 }
 
-Team *findTeamByName(Team *teamList, string &teamName) {
+Team *findTeamByName(Team *teamList, const string &teamName) {
     Team *temp = teamList;
     while (temp) {
         if (temp->name == teamName) {
@@ -268,7 +269,7 @@ Team *findTeamByName(Team *teamList, string &teamName) {
     return nullptr;
 }
 
-void removeTeamInCountry(Country **country, string &teamName) {
+void removeTeamInCountry(Country **country, const string &teamName) {
     Country *tempCountry = *country;
     Team *current = tempCountry->teamList;
     if (current->name == teamName) {
@@ -288,7 +289,7 @@ void removeTeamInCountry(Country **country, string &teamName) {
     }
 }
 
-void removeTeamFromTeamList(Team **teamList, string &teamName) {
+void removeTeamFromTeamList(Team **teamList, const string &teamName) {
     Team *current = *teamList;
     if (current->name == teamName) {
         *teamList = current->next;
@@ -395,10 +396,14 @@ void deleteCountry(Country **countryList, const string &countryName) {
 }
 
 void addTeamInCountry(Country **country, Team **teamList, Team *newTeam) {
+    if (!*country) throw invalid_argument("Country is null");
+    if (!*teamList) throw invalid_argument("Team list is null");
+
     if ((*teamList)->points > 0) {
+        // Присвоение очков для новой команды
         newTeam->points = rand() % 100 + 1;
 
-        // Добавление команды в country->teamList
+        // Вставка команды в country->teamList с сортировкой по очкам
         Team **tempTeamList = &((*country)->teamList);
         while (*tempTeamList && (*tempTeamList)->points >= newTeam->points) {
             tempTeamList = &((*tempTeamList)->next);
@@ -406,29 +411,48 @@ void addTeamInCountry(Country **country, Team **teamList, Team *newTeam) {
         newTeam->next = *tempTeamList;
         *tempTeamList = newTeam;
 
-        // Добавление команды в teamList
+        // Вставка команды в teamList с сортировкой по очкам
         Team **tempTeamListMain = teamList;
         while (*tempTeamListMain && (*tempTeamListMain)->points >= newTeam->points) {
             tempTeamListMain = &((*tempTeamListMain)->next);
         }
         newTeam->next = *tempTeamListMain;
         *tempTeamListMain = newTeam;
+
+        // Обновляем ранги
+        refreshPlacements(teamList);
     } else {
-        Team *tempTeam = (*country)->teamList;
-        while (tempTeam->next) {
-            tempTeam = tempTeam->next;
+        if ((*country)->teamList == nullptr) {
+            (*country)->teamList = newTeam;
+            (*country)->teamList->next = nullptr;
+        } else {
+            // Вставка в конец списка country->teamList
+            Team *tempTeam = (*country)->teamList;
+
+            while (tempTeam->next) {
+                tempTeam = tempTeam->next;
+            }
+            tempTeam->next = newTeam;
         }
-        int rank = 1;
-        tempTeam->next = newTeam;
-        tempTeam = *teamList;
-        while (tempTeam->next) {
-            tempTeam = tempTeam->next;
-            rank++;
+
+        // Вставка в конец списка teamList
+        int rank = 1; // начинаем ранжировать с 1
+        if (*teamList == nullptr) {
+            *teamList = newTeam;
+            (*teamList)->next = nullptr;
+        } else {
+            Team *temp = *teamList;
+
+            while (temp->next) {
+                temp = temp->next;
+                rank++;
+            }
+            newTeam->rank = rank + 1;
+            temp->next = newTeam;
         }
-        newTeam->rank = rank + 1;
-        tempTeam->next = newTeam;
     }
 }
+
 
 void addCountry(Country **countryList, Country *newCountry) {
     if (!countryList || (*countryList)->name > newCountry->name) {
@@ -442,4 +466,65 @@ void addCountry(Country **countryList, Country *newCountry) {
         newCountry->next = current->next;
         current->next = newCountry;
     }
+}
+
+Team *findTeamByRank(Team *teamList, int rank) {
+    if (!teamList) throw invalid_argument("Team list is null");
+    Team *current = teamList;
+    while (current) {
+        if (current->rank == rank) {
+            return current;
+        }
+        current = current->next;
+    }
+    return nullptr;
+}
+
+Team *findTeamByPoints(Team *teamList, int min, int max) {
+    if (!teamList) throw invalid_argument("Team list is null");
+    Team *current = teamList;
+    Team *result = nullptr;
+    Team *resultTail = nullptr;
+
+    while (current) {
+        if (current->points >= min && current->points <= max) {
+            Team *newTeam = new Team(current->name, current->rank);
+            newTeam->points = current->points;
+            newTeam->next = nullptr;
+
+            if (!result) {
+                result = newTeam;
+                resultTail = result;
+            } else {
+                resultTail->next = newTeam;
+                resultTail = resultTail->next;
+            }
+        }
+        current = current->next;
+    }
+    return result;
+}
+
+Country *findCountryByName(Country *countryList, const string &countryName) {
+    if (!countryList) throw invalid_argument("Country list is nullptr");
+    Country *current = countryList;
+    while (current) {
+        if (current->name == countryName) return current;
+        current = current->next;
+    }
+    return nullptr;
+}
+
+Country *findCountryByTeam(Country *countryList, const string &teamName) {
+    if (!countryList) throw invalid_argument("Country list is nullptr");
+    Country *current = countryList;
+    while (current) {
+        Team *currentTeam = current->teamList;
+        while (currentTeam) {
+            if (currentTeam->name == teamName) return current;
+            currentTeam = currentTeam->next;
+        }
+        current = current->next;
+    }
+    return nullptr;
 }

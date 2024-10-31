@@ -12,5 +12,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 # Add tasks subprojects
 add_executable(Indiv1 main.cpp CountryList/CountryList.h CountryList/CountryList.cpp
-        handlers/handlers.cpp
-        handlers/handlers.h)
+        handlers/menu.cpp
+        handlers/menu.h)
