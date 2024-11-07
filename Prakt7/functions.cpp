@@ -17,7 +17,7 @@ tree *insertStudent(tree **t, const Student &student) {
         (*t)->right = insertStudent(&(*t)->right, student);
     }
     return *t;
-};
+}
 
 tree *formTree() {
     tree *t = nullptr;

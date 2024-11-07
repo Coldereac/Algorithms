@@ -2,7 +2,8 @@
 #include <ostream>
 
 /* ready tree (111 to search)
-*100
+*
+100
 28
 -4
 0
