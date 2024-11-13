@@ -4,6 +4,8 @@
 
 #include "Schedule.h"
 
+#include <iomanip>
+
 Train::Train(int number, const string &destination, int departureHours, int departureMinutes) {
     if (number <= 0) {
         throw out_of_range("Number must be greater than zero");
@@ -23,7 +25,6 @@ Train::Train(int number, const string &destination, int departureHours, int depa
     if (departureMinutes > 59) {
         throw out_of_range("Departure minutes must be less than 59");
     }
-
     this->number = number;
     this->destination = destination;
     this->departureHours = departureHours;
@@ -31,8 +32,10 @@ Train::Train(int number, const string &destination, int departureHours, int depa
 }
 
 void Train::printInfo() const {
-    cout << "Train number: " << number << ", Destination: " << destination
-            << ", Departure time: " << departureHours << ":" << departureMinutes << endl;
+    cout << "Train number: " << number << ", Destination: " << setw(20) << setfill(' ') << left << destination
+            << ", Departure time: " << right << std::setw(2) << std::setfill('0') << departureHours << ":" <<
+            std::setw(2) <<
+            std::setfill('0') << departureMinutes << endl;
 }
 
 AVLNode::AVLNode(Train &data): data(data), left(nullptr), right(nullptr), height(0) {
@@ -41,6 +44,7 @@ AVLNode::AVLNode(Train &data): data(data), left(nullptr), right(nullptr), height
 int AVLNode::getHeight() const {
     return height;
 }
+
 
 int AVLNode::getBalance() const {
     return (left ? left->height : 0) - (right ? right->height : 0);
@@ -80,54 +84,69 @@ AVLNode *AVLNode::findMin() {
     return current;
 }
 
-AVLNode* AVLNode::searchByNumber(int number) {
-    // Перевіряємо поточний вузол
-    if (number == data.number) {
-        return this;
+AVLNode *Schedule::searchByNumber(int number, AVLNode *node) {
+    if (!node || node->data.number == number)
+        return node;
+    if (number < node->data.number)
+        return searchByNumber(number, node->left);
+    return searchByNumber(number, node->right);
+}
+
+Schedule *Schedule::searchByDestination(const string &destination) const {
+    auto *result = new Schedule();
+    searchByDestinationHelper(root, destination, result);
+    return result;
+}
+
+void Schedule::searchByDestinationHelper(AVLNode *node, const string &destination, Schedule *result) const {
+    if (!node) return;
+
+    // Рекурсивний обхід лівого піддерева
+    searchByDestinationHelper(node->left, destination, result);
+
+    // Перевірка, чи відповідає поточний поїзд призначенню
+    if (node->data.destination == destination) {
+        result->insert(node->data); // Додавання у нове дерево результатів
     }
-    // Рекурсивно шукаємо в лівому піддереві, якщо існує
-    AVLNode* foundNode = nullptr;
-    if (left != nullptr) {
-        foundNode = left->searchByNumber(number);
-    }
-    // Якщо не знайдено в лівому піддереві, шукаємо в правому піддереві
-    if (foundNode == nullptr && right != nullptr) {
-        foundNode = right->searchByNumber(number);
-    }
-    return foundNode;
+
+    // Рекурсивний обхід правого піддерева
+    searchByDestinationHelper(node->right, destination, result);
 }
 
 
 Schedule::Schedule() : root(nullptr) {
 }
 
-int compareTime(Train &train1, Train &train2) {
-    return (train1.departureHours * 60 + train1.departureMinutes) - (
-               train2.departureHours * 60 + train2.departureMinutes);
-}
-
 AVLNode *Schedule::insert(AVLNode *node, Train &data) {
     if (!node) return new AVLNode(data);
 
-    if (compareTime(data, node->data) < 0)
-        node->left = insert(node->left, data);
-    else if (compareTime(data, node->data) > 0)
-        node->right = insert(node->right, data);
-    else
-        return node;
+    // Перевірка дубліката за номером поїзда
+    if (data.number == node->data.number) {
+        throw std::runtime_error("Train with number " + std::to_string(data.number) + " already exists.");
+    }
 
-    node->height = 1 + max(node->left->getHeight(), node->right->getHeight());
+    if (data.number < node->data.number)
+        node->left = insert(node->left, data);
+    else if (data.number > node->data.number)
+        node->right = insert(node->right, data);
+
+    node->height = 1 + max(node->left ? node->left->getHeight() : 0, node->right ? node->right->getHeight() : 0);
     int balance = node->getBalance();
 
-    if (balance > 1 && compareTime(data, node->left->data) < 0)
+    if (balance > 1 && node->left && data.number < node->left->data.number) {
         return node->rotateRight();
-    if (balance < -1 && compareTime(data, node->left->data) > 0)
+    }
+
+    if (balance < -1 && node->right && data.number > node->right->data.number) {
         return node->rotateLeft();
-    if (balance > 1 && compareTime(data, node->left->data) > 0) {
+    }
+
+    if (balance > 1 && node->left && data.number > node->left->data.number) {
         node->left = node->left->rotateLeft();
         return node->rotateRight();
     }
-    if (balance < -1 && compareTime(data, node->left->data) < 0) {
+
+    if (balance < -1 && node->right && data.number < node->right->data.number) {
         node->right = node->right->rotateRight();
         return node->rotateLeft();
     }
@@ -135,61 +154,90 @@ AVLNode *Schedule::insert(AVLNode *node, Train &data) {
     return node;
 }
 
-AVLNode* Schedule::remove(AVLNode *node, Train &train) {
-    if (!node) return node;
+AVLNode *Schedule::remove(AVLNode *node, int number) {
+    // Базовий випадок: якщо вузол порожній, поїзд не знайдено
+    if (!node) {
+        throw std::runtime_error("Train with number " + std::to_string(number) + " not found.");
+    }
 
-    // Порівняння за часом відправлення, а не за номером
-    int comparison = compareTime(train, node->data);
-    if (comparison < 0) {
-        node->left = remove(node->left, train);
-    } else if (comparison > 0) {
-        node->right = remove(node->right, train);
+    // Пошук вузла для видалення
+    if (number < node->data.number) {
+        node->left = remove(node->left, number);
+    } else if (number > node->data.number) {
+        node->right = remove(node->right, number);
     } else {
-        // Вузол знайдено
+        // Номер збігається, вузол знайдено та готується до видалення
+
+        // Вузол з одним або без дочірніх вузлів
         if (!node->left || !node->right) {
             AVLNode *temp = node->left ? node->left : node->right;
-            if (!temp) {
-                temp = node;
-                node = nullptr;
-            } else {
-                *node = *temp;
-            }
-            delete temp;
+            delete node; // видаляємо поточний вузол
+            return temp;
         } else {
-            AVLNode *temp = node->right->findMin();
-            node->data = temp->data;
-            node->right = remove(node->right, temp->data);
+            // Вузол з двома дочірніми елементами
+            AVLNode *minNode = node->right->findMin();
+            node->data = minNode->data;
+            node->right = remove(node->right, minNode->data.number);
         }
     }
 
-    // Оновлення висоти та балансування дерева
-    if (node) {
-        node->height = 1 + max(node->left->getHeight(), node->right->getHeight());
-        int balance = node->getBalance();
+    // Оновлення висоти поточного вузла
+    node->height = 1 + max(
+                       node->left ? node->left->height : 0,
+                       node->right ? node->right->height : 0
+                   );
 
-        if (balance > 1 && node->left->getBalance() >= 0)
-            return node->rotateRight();
-        if (balance > 1 && node->left->getBalance() < 0) {
-            node->left = node->left->rotateLeft();
-            return node->rotateRight();
-        }
-        if (balance < -1 && node->right->getBalance() <= 0)
-            return node->rotateLeft();
-        if (balance < -1 && node->right->getBalance() > 0) {
-            node->right = node->right->rotateRight();
-            return node->rotateLeft();
-        }
+    // Балансування дерева
+    int balance = node->getBalance();
+
+    // Чотири випадки дисбалансу
+    // Case 1: Left Left
+    if (balance > 1 && node->left && node->left->getBalance() >= 0) {
+        return node->rotateRight();
+    }
+
+    // Case 2: Left Right
+    if (balance > 1 && node->left && node->left->getBalance() < 0) {
+        node->left = node->left->rotateLeft();
+        return node->rotateRight();
+    }
+
+    // Case 3: Right Right
+    if (balance < -1 && node->right && node->right->getBalance() <= 0) {
+        return node->rotateLeft();
+    }
+
+    // Case 4: Right Left
+    if (balance < -1 && node->right && node->right->getBalance() > 0) {
+        node->right = node->right->rotateRight();
+        return node->rotateLeft();
     }
 
     return node;
 }
 
+void Schedule::destroyTree(AVLNode *node) {
+    if (!node) return;
 
-void Schedule::inOrder(const AVLNode *node) {
+    // Спершу звільняємо ліве і праве піддерева
+    destroyTree(node->left);
+    destroyTree(node->right);
+
+    // Звільняємо поточний вузол
+    delete node;
+}
+
+Schedule::~Schedule() {
+    destroyTree(root);
+    root = nullptr;
+}
+
+
+void Schedule::printInOrder(const AVLNode *node) {
     if (node) {
-        inOrder(node->left);
+        printInOrder(node->left);
         node->data.printInfo();
-        inOrder(node->right);
+        printInOrder(node->right);
     }
 }
 
@@ -202,18 +250,18 @@ void Schedule::remove(int number) {
 }
 
 void Schedule::displayAll() const {
-    inOrder(root);
+    printInOrder(root);
 }
 
 void Schedule::displayTrainByNumber(int number) const {
-    AVLNode *trainNode = root ? root->searchByNumber(number) : nullptr;
-    if (trainNode) trainNode->data.printInfo();
+    if (AVLNode *trainNode = root ? searchByNumber(number, root) : nullptr) trainNode->data.printInfo();
     else cout << "Train not found." << endl;
 }
 
 void Schedule::saveToFile(const string &filename) const {
     ofstream file(filename);
     if (file.is_open()) {
+        file << countNodes(root) << endl;
         saveToFile(root, file);
         file.close();
     }
@@ -228,22 +276,19 @@ void Schedule::saveToFile(const AVLNode *node, ofstream &file) {
     }
 }
 
+int Schedule::countNodes(AVLNode *node) {
+    if (node == nullptr) {
+        return 0;
+    }
+    return 1 + countNodes(node->left) + countNodes(node->right);
+}
+
 void Schedule::loadFromFile(const string &filename) {
     ifstream file(filename);
 
     if (file.is_open()) {
-        int nodeCount = 0;
-        int number;
-        string destination;
-        int departureHours;
-        int departureMinutes;
-
-        while (file >> number >> destination >> departureHours >> departureMinutes) {
-            nodeCount++;
-        }
-
-        file.clear();
-        file.seekg(0, ios::beg);
+        int nodeCount;
+        file >> nodeCount;
 
         root = buildBalancedTreeFromFile(file, 0, nodeCount - 1);
         file.close();

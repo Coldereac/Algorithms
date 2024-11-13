@@ -15,8 +15,8 @@ class Train {
 public:
     int number;
     string destination;
-    int departureHours;
     int departureMinutes;
+    int departureHours;
 
     Train(int number = 1, const string &destination = "", int departureHours = 0, int departureMinutes = 0);
 
@@ -41,33 +41,48 @@ public:
     AVLNode *rotateLeft();
 
     AVLNode *findMin();
-
-    AVLNode *searchByNumber(int number);
-
 };
 
 
 class Schedule {
     AVLNode *root;
 
-    static AVLNode *insert(AVLNode *node, Train &data);
-
-    static AVLNode *remove(AVLNode *node, int number);
-
-    static void inOrder(const AVLNode *node);
-
     static void saveToFile(const AVLNode *node, ofstream &file);
 
     static AVLNode *buildBalancedTreeFromFile(ifstream &file, int start, int end);
 
+    static int countNodes(AVLNode* node);
+
 public:
     Schedule();
+
     void insert(Train &data);
+
     void remove(int number);
+
     void displayAll() const;
+
     void displayTrainByNumber(int number) const;
+
     void saveToFile(const string &filename) const;
+
     void loadFromFile(const string &filename);
+
+    Schedule *searchByDestination(const string &destination) const;
+
+    void searchByDestinationHelper(AVLNode *node, const string &destination, Schedule *result) const;
+
+    static AVLNode *searchByNumber(int number, AVLNode *node);
+
+    static void printInOrder(const AVLNode *node);
+
+    static AVLNode *insert(AVLNode *node, Train &data);
+
+    static AVLNode *remove(AVLNode *node, int number);
+
+    void destroyTree(AVLNode *node);
+
+    ~Schedule();
 };
 
 

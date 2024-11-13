@@ -26,10 +26,6 @@ int main() {
         cin >> choice;
 
         try {
-            if (cin.fail()) {
-                throw invalid_argument("Invalid input. Please enter a number.");
-            }
-
             switch (choice) {
                 case 1: {
                     char choiceInside;
@@ -48,11 +44,19 @@ int main() {
                     break;
                 }
                 case 2: {
-                    string filename;
-                    cout << "Enter filename to save data to: ";
-                    cin >> filename;
-                    schedule.saveToFile(filename);
-                    cout << "Data saved successfully to " << filename << ".\n";
+                    char choiceInside;
+                    cout << "Do you want to save to standard file?[y/n]";
+                    cin >> choiceInside;
+                    if (choiceInside == 'y') {
+                        schedule.saveToFile(STANDARDFILE);
+                        cout << "Data saved successfully" << endl;
+                    } else {
+                        string filename;
+                        cout << "Enter filename to save data to: ";
+                        cin >> filename;
+                        schedule.saveToFile(filename);
+                        cout << "Data saved successfully to " << filename << ".\n";
+                    }
                     break;
                 }
                 case 3: {
@@ -68,14 +72,15 @@ int main() {
                     schedule.displayTrainByNumber(trainNumber);
                     break;
                 }
-                // case 5: {
-                //     string destination;
-                //     cout << "Enter destination: ";
-                //     cin >> destination;
-                //     cout << "\nTrains to " << destination << ":\n";
-                //     schedule.displayByDestination(destination);
-                //     break;
-                // }
+                case 5: {
+                    string destination;
+                    cout << "Enter destination: ";
+                    cin >> destination;
+                    cout << "\nTrains to " << destination << ":\n";
+                    Schedule *finded = schedule.searchByDestination(destination);
+                    finded->displayAll();
+                    break;
+                }
                 case 6: {
                     int trainNumber;
                     string destination;
@@ -107,12 +112,8 @@ int main() {
                 default:
                     cout << "Invalid option. Please try again.\n";
             }
-        } catch (const invalid_argument &e) {
-            cerr << "Input Error: " << e.what() << endl;
-        } catch (const runtime_error &e) {
-            cerr << "Runtime Error: " << e.what() << endl;
-        } catch (...) {
-            cerr << "An unexpected error occurred." << endl;
+        } catch (const exception &e) {
+            cout << "Error: " << e.what() << endl;
         }
     }
 
