@@ -98,7 +98,7 @@ Schedule *Schedule::searchByDestination(const string &destination) const {
     return result;
 }
 
-void Schedule::searchByDestinationHelper(AVLNode *node, const string &destination, Schedule *result) const {
+void Schedule::searchByDestinationHelper(AVLNode *node, const string &destination, Schedule *result) {
     if (!node) return;
 
     // Рекурсивний обхід лівого піддерева
@@ -233,11 +233,11 @@ Schedule::~Schedule() {
 }
 
 
-void Schedule::printInOrder(const AVLNode *node) {
+void Schedule::displayAllHelper(const AVLNode *node) {
     if (node) {
-        printInOrder(node->left);
+        displayAllHelper(node->left);
         node->data.printInfo();
-        printInOrder(node->right);
+        displayAllHelper(node->right);
     }
 }
 
@@ -250,7 +250,7 @@ void Schedule::remove(int number) {
 }
 
 void Schedule::displayAll() const {
-    printInOrder(root);
+    displayAllHelper(root);
 }
 
 void Schedule::displayTrainByNumber(int number) const {
