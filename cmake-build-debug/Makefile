@@ -117,136 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Prakt0
-
-# Build rule for target.
-Prakt0: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt0
-.PHONY : Prakt0
-
-# fast build rule for target.
-Prakt0/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt0/CMakeFiles/Prakt0.dir/build.make Prakt0/CMakeFiles/Prakt0.dir/build
-.PHONY : Prakt0/fast
-
-#=============================================================================
-# Target rules for targets named Prakt2_1
-
-# Build rule for target.
-Prakt2_1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt2_1
-.PHONY : Prakt2_1
-
-# fast build rule for target.
-Prakt2_1/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt2/1/CMakeFiles/Prakt2_1.dir/build.make Prakt2/1/CMakeFiles/Prakt2_1.dir/build
-.PHONY : Prakt2_1/fast
-
-#=============================================================================
-# Target rules for targets named Prakt2_2
-
-# Build rule for target.
-Prakt2_2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt2_2
-.PHONY : Prakt2_2
-
-# fast build rule for target.
-Prakt2_2/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt2/2/CMakeFiles/Prakt2_2.dir/build.make Prakt2/2/CMakeFiles/Prakt2_2.dir/build
-.PHONY : Prakt2_2/fast
-
-#=============================================================================
-# Target rules for targets named Prakt2_3
-
-# Build rule for target.
-Prakt2_3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt2_3
-.PHONY : Prakt2_3
-
-# fast build rule for target.
-Prakt2_3/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt2/3/CMakeFiles/Prakt2_3.dir/build.make Prakt2/3/CMakeFiles/Prakt2_3.dir/build
-.PHONY : Prakt2_3/fast
-
-#=============================================================================
-# Target rules for targets named Prakt3
-
-# Build rule for target.
-Prakt3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt3
-.PHONY : Prakt3
-
-# fast build rule for target.
-Prakt3/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt3/CMakeFiles/Prakt3.dir/build.make Prakt3/CMakeFiles/Prakt3.dir/build
-.PHONY : Prakt3/fast
-
-#=============================================================================
-# Target rules for targets named Prakt4
-
-# Build rule for target.
-Prakt4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt4
-.PHONY : Prakt4
-
-# fast build rule for target.
-Prakt4/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt4/CMakeFiles/Prakt4.dir/build.make Prakt4/CMakeFiles/Prakt4.dir/build
-.PHONY : Prakt4/fast
-
-#=============================================================================
-# Target rules for targets named Prakt4_3
-
-# Build rule for target.
-Prakt4_3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt4_3
-.PHONY : Prakt4_3
-
-# fast build rule for target.
-Prakt4_3/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt4_3/CMakeFiles/Prakt4_3.dir/build.make Prakt4_3/CMakeFiles/Prakt4_3.dir/build
-.PHONY : Prakt4_3/fast
-
-#=============================================================================
-# Target rules for targets named Prakt5
-
-# Build rule for target.
-Prakt5: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt5
-.PHONY : Prakt5
-
-# fast build rule for target.
-Prakt5/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt5/CMakeFiles/Prakt5.dir/build.make Prakt5/CMakeFiles/Prakt5.dir/build
-.PHONY : Prakt5/fast
-
-#=============================================================================
-# Target rules for targets named Indiv1
-
-# Build rule for target.
-Indiv1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Indiv1
-.PHONY : Indiv1
-
-# fast build rule for target.
-Indiv1/fast:
-	$(MAKE) $(MAKESILENT) -f Indiv1/CMakeFiles/Indiv1.dir/build.make Indiv1/CMakeFiles/Indiv1.dir/build
-.PHONY : Indiv1/fast
-
-#=============================================================================
-# Target rules for targets named Prakt6
-
-# Build rule for target.
-Prakt6: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt6
-.PHONY : Prakt6
-
-# fast build rule for target.
-Prakt6/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt6/CMakeFiles/Prakt6.dir/build.make Prakt6/CMakeFiles/Prakt6.dir/build
-.PHONY : Prakt6/fast
-
-#=============================================================================
 # Target rules for targets named Prakt7
 
 # Build rule for target.
@@ -285,6 +155,32 @@ Indiv2/fast:
 	$(MAKE) $(MAKESILENT) -f Indiv2/CMakeFiles/Indiv2.dir/build.make Indiv2/CMakeFiles/Indiv2.dir/build
 .PHONY : Indiv2/fast
 
+#=============================================================================
+# Target rules for targets named Prakt8
+
+# Build rule for target.
+Prakt8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt8
+.PHONY : Prakt8
+
+# fast build rule for target.
+Prakt8/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt8/CMakeFiles/Prakt8.dir/build.make Prakt8/CMakeFiles/Prakt8.dir/build
+.PHONY : Prakt8/fast
+
+#=============================================================================
+# Target rules for targets named Indiv3
+
+# Build rule for target.
+Indiv3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Indiv3
+.PHONY : Indiv3
+
+# fast build rule for target.
+Indiv3/fast:
+	$(MAKE) $(MAKESILENT) -f Indiv3/CMakeFiles/Indiv3.dir/build.make Indiv3/CMakeFiles/Indiv3.dir/build
+.PHONY : Indiv3/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -293,19 +189,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Indiv1"
 	@echo "... Indiv1_correct"
 	@echo "... Indiv2"
-	@echo "... Prakt0"
-	@echo "... Prakt2_1"
-	@echo "... Prakt2_2"
-	@echo "... Prakt2_3"
-	@echo "... Prakt3"
-	@echo "... Prakt4"
-	@echo "... Prakt4_3"
-	@echo "... Prakt5"
-	@echo "... Prakt6"
+	@echo "... Indiv3"
 	@echo "... Prakt7"
+	@echo "... Prakt8"
 .PHONY : help
 
 
