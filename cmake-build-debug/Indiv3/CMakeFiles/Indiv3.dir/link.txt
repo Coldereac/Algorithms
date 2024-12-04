@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Indiv3.dir/main.cpp.o CMakeFiles/Indiv3.dir/functions.cpp.o -o Indiv3

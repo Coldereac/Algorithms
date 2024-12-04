@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Prakt4.dir/main.cpp.o CMakeFiles/Prakt4.dir/functions.cpp.o CMakeFiles/Prakt4.dir/recursion.cpp.o -o Prakt4

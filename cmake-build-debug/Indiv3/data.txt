@@ -1,0 +1,13 @@
+12 Mop the hallway floor
+13 Take out the trash
+41 Vacuum the living room carpet
+6 Wipe down door handles
+7 Pick up scattered items
+8 Scrub the kitchen stove
+9 Wipe the table
+10 Wash the kitchen sink
+1 Put items back in their places
+12 Change the bed linens
+32 Clean the bedroom window
+4 Organize the wardrobe
+5 Wipe the computer monitor

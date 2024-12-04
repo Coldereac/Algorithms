@@ -55,7 +55,7 @@ int main() {
                     cout << "Dou you want to load from standard file?[y/n]";
                     cin >> input;
                     if (input == 'y' || input == 'Y') {
-                        deque.loadFromFile(DATA_STANDART_PATH);
+                        deque.loadFromFile(DATA_STANDARD_PATH);
                     } else {
                         cout << "Input file path: ";
                         string path;
@@ -68,7 +68,7 @@ int main() {
                     cout << "Dou you want to save to standard file?[y/n]";
                     cin >> input;
                     if (input == 'y' || input == 'Y') {
-                        deque.saveToFile(DATA_STANDART_PATH);
+                        deque.saveToFile(DATA_STANDARD_PATH);
                     } else {
                         cout << "Input file path: ";
                         string path;

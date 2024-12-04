@@ -1,0 +1,126 @@
+Insertion Sort:
+
+Size: 10
+Worst Case:
+Comparisons = 54, Swaps = 54
+Best Case:
+Comparisons = 9, Swaps = 0
+Random Case:
+Comparisons = 15, Swaps = 9
+
+Size: 100
+Worst Case:
+Comparisons = 5049, Swaps = 5049
+Best Case:
+Comparisons = 99, Swaps = 0
+Random Case:
+Comparisons = 2458, Swaps = 2453
+
+Size: 1000
+Worst Case:
+Comparisons = 500499, Swaps = 500499
+Best Case:
+Comparisons = 999, Swaps = 0
+Random Case:
+Comparisons = 257366, Swaps = 257357
+
+Size: 10000
+Worst Case:
+Comparisons = 50004999, Swaps = 50004999
+Best Case:
+Comparisons = 9999, Swaps = 0
+Random Case:
+Comparisons = 24961315, Swaps = 24961308
+
+Size: 100000
+Worst Case:
+Comparisons = 5000049999, Swaps = 5000049999
+Best Case:
+Comparisons = 99999, Swaps = 0
+Random Case:
+Comparisons = 2499067842, Swaps = 2499067830
+
+Bubble Sort:
+
+Size: 10
+Worst Case:
+Comparisons = 45, Swaps = 45
+Best Case:
+Comparisons = 9, Swaps = 0
+Random Case:
+Comparisons = 45, Swaps = 29
+
+Size: 100
+Worst Case:
+Comparisons = 4950, Swaps = 4950
+Best Case:
+Comparisons = 99, Swaps = 0
+Random Case:
+Comparisons = 4760, Swaps = 2525
+
+Size: 1000
+Worst Case:
+Comparisons = 499500, Swaps = 499500
+Best Case:
+Comparisons = 999, Swaps = 0
+Random Case:
+Comparisons = 498275, Swaps = 242352
+
+Size: 10000
+Worst Case:
+Comparisons = 49995000, Swaps = 49995000
+Best Case:
+Comparisons = 9999, Swaps = 0
+Random Case:
+Comparisons = 49990571, Swaps = 24938291
+
+Size: 100000
+Worst Case:
+Comparisons = 4999950000, Swaps = 4999950000
+Best Case:
+Comparisons = 99999, Swaps = 0
+Random Case:
+Comparisons = 4999869990, Swaps = 2500558660
+
+Selection Sort:
+
+Size: 10
+Worst Case:
+Comparisons = 45, Swaps = 5
+Best Case:
+Comparisons = 45, Swaps = 0
+Random Case:
+Comparisons = 45, Swaps = 7
+
+Size: 100
+Worst Case:
+Comparisons = 4950, Swaps = 50
+Best Case:
+Comparisons = 4950, Swaps = 0
+Random Case:
+Comparisons = 4950, Swaps = 99
+
+Size: 1000
+Worst Case:
+Comparisons = 499500, Swaps = 500
+Best Case:
+Comparisons = 499500, Swaps = 0
+Random Case:
+Comparisons = 499500, Swaps = 992
+
+Size: 10000
+Worst Case:
+Comparisons = 49995000, Swaps = 5000
+Best Case:
+Comparisons = 49995000, Swaps = 0
+Random Case:
+Comparisons = 49995000, Swaps = 9989
+
+Size: 100000
+Worst Case:
+Comparisons = 4999950000, Swaps = 50000
+Best Case:
+Comparisons = 4999950000, Swaps = 0
+Random Case:
+Comparisons = 4999950000, Swaps = 99986
+

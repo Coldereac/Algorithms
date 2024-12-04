@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Prakt11",
+					"jsonFile" : "directory-Prakt11-Debug-6f690ece6e687da0b65f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Prakt11",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "Prakt12",
+					"jsonFile" : "directory-Prakt12-Debug-861863c8d363a2a7e204.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "Prakt12",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Prakt8",
+					"jsonFile" : "directory-Prakt8-Debug-024991265a797a0adcf3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "Prakt8",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Algorithms"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Prakt11",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "Prakt12",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "Prakt8",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Prakt11::@6f3faf1206e0480bca36",
+					"jsonFile" : "target-Prakt11-Debug-14045d0d719a89f8fa2a.json",
+					"name" : "Prakt11",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Prakt12::@0c68483800a5f7d01b71",
+					"jsonFile" : "target-Prakt12-Debug-6b70e5b9fb019d076f4d.json",
+					"name" : "Prakt12",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Prakt8::@29c328f9d20f8269e50a",
+					"jsonFile" : "target-Prakt8-Debug-958704ce04481859b70e.json",
+					"name" : "Prakt8",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/malinka/CLionProjects/Algorithms/cmake-build-debug",
+		"source" : "/home/malinka/CLionProjects/Algorithms"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

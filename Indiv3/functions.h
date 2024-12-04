@@ -5,7 +5,7 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#define DATA_STANDART_PATH "/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv3/data.txt"
+#define DATA_STANDARD_PATH "/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv3/data.txt"
 
 using namespace std;
 #include <string>

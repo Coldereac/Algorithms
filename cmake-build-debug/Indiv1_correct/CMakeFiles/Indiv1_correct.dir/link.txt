@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Indiv1_correct.dir/main.cpp.o CMakeFiles/Indiv1_correct.dir/functions.cpp.o CMakeFiles/Indiv1_correct.dir/handlers/menu.cpp.o -o Indiv1_correct

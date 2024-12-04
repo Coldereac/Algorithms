@@ -117,43 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Prakt7
+# Target rules for targets named Prakt11
 
 # Build rule for target.
-Prakt7: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt7
-.PHONY : Prakt7
+Prakt11: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt11
+.PHONY : Prakt11
 
 # fast build rule for target.
-Prakt7/fast:
-	$(MAKE) $(MAKESILENT) -f Prakt7/CMakeFiles/Prakt7.dir/build.make Prakt7/CMakeFiles/Prakt7.dir/build
-.PHONY : Prakt7/fast
+Prakt11/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt11/CMakeFiles/Prakt11.dir/build.make Prakt11/CMakeFiles/Prakt11.dir/build
+.PHONY : Prakt11/fast
 
 #=============================================================================
-# Target rules for targets named Indiv1_correct
+# Target rules for targets named Prakt12
 
 # Build rule for target.
-Indiv1_correct: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Indiv1_correct
-.PHONY : Indiv1_correct
+Prakt12: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Prakt12
+.PHONY : Prakt12
 
 # fast build rule for target.
-Indiv1_correct/fast:
-	$(MAKE) $(MAKESILENT) -f Indiv1_correct/CMakeFiles/Indiv1_correct.dir/build.make Indiv1_correct/CMakeFiles/Indiv1_correct.dir/build
-.PHONY : Indiv1_correct/fast
-
-#=============================================================================
-# Target rules for targets named Indiv2
-
-# Build rule for target.
-Indiv2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Indiv2
-.PHONY : Indiv2
-
-# fast build rule for target.
-Indiv2/fast:
-	$(MAKE) $(MAKESILENT) -f Indiv2/CMakeFiles/Indiv2.dir/build.make Indiv2/CMakeFiles/Indiv2.dir/build
-.PHONY : Indiv2/fast
+Prakt12/fast:
+	$(MAKE) $(MAKESILENT) -f Prakt12/CMakeFiles/Prakt12.dir/build.make Prakt12/CMakeFiles/Prakt12.dir/build
+.PHONY : Prakt12/fast
 
 #=============================================================================
 # Target rules for targets named Prakt8
@@ -168,19 +155,6 @@ Prakt8/fast:
 	$(MAKE) $(MAKESILENT) -f Prakt8/CMakeFiles/Prakt8.dir/build.make Prakt8/CMakeFiles/Prakt8.dir/build
 .PHONY : Prakt8/fast
 
-#=============================================================================
-# Target rules for targets named Indiv3
-
-# Build rule for target.
-Indiv3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Indiv3
-.PHONY : Indiv3
-
-# fast build rule for target.
-Indiv3/fast:
-	$(MAKE) $(MAKESILENT) -f Indiv3/CMakeFiles/Indiv3.dir/build.make Indiv3/CMakeFiles/Indiv3.dir/build
-.PHONY : Indiv3/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,10 +163,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Indiv1_correct"
-	@echo "... Indiv2"
-	@echo "... Indiv3"
-	@echo "... Prakt7"
+	@echo "... Prakt11"
+	@echo "... Prakt12"
 	@echo "... Prakt8"
 .PHONY : help
 

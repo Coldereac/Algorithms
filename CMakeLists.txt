@@ -30,13 +30,19 @@ project(Algorithms)
 #add_subdirectory(
 #        Prakt6
 #)
-add_subdirectory(
-        Prakt7
-)
-add_subdirectory(Indiv1_correct)
+#add_subdirectory(
+#        Prakt7
+#)
+#add_subdirectory(Indiv1_correct)
+#
+#add_subdirectory(Indiv2)
+#
+#add_subdirectory(Prakt8)
+#
+#add_subdirectory(Indiv3)
 
-add_subdirectory(Indiv2)
+add_subdirectory(Prakt11)
+
+add_subdirectory(Prakt12)
 
 add_subdirectory(Prakt8)
-
-add_subdirectory(Indiv3)

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Prakt11.dir/main.cpp.o -o Prakt11

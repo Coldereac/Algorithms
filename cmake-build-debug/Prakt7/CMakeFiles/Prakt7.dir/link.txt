@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Prakt7.dir/main.cpp.o CMakeFiles/Prakt7.dir/functions.cpp.o -o Prakt7

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Prakt12.dir/ExternalSort.cpp.o -o Prakt12

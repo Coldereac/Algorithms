@@ -1,0 +1,112 @@
+External Merge Sort: 
+
+
+Size: 10
+Worst Case: 
+Comparisons = 84, Moves = 57
+Best Case: 
+Comparisons = 68, Moves = 49
+Random Case: 
+Comparisons = 74, Moves = 52
+
+
+Size: 100
+Worst Case: 
+Comparisons = 414, Moves = 1007
+Best Case: 
+Comparisons = 438, Moves = 999
+Random Case: 
+Comparisons = 863, Moves = 1188
+
+
+Size: 1000
+Worst Case: 
+Comparisons = 5224, Moves = 16467
+Best Case: 
+Comparisons = 5608, Moves = 16459
+Random Case: 
+Comparisons = 11257, Moves = 18347
+
+
+Size: 10000
+Worst Case: 
+Comparisons = 69384, Moves = 229547
+Best Case: 
+Comparisons = 70488, Moves = 229539
+Random Case: 
+Comparisons = 145079, Moves = 248480
+
+
+Size: 100000
+Worst Case: 
+Comparisons = 846144, Moves = 2972347
+Best Case: 
+Comparisons = 890128, Moves = 2972339
+Random Case: 
+Comparisons = 1782959, Moves = 3161402
+
+
+Size: 1000000
+Worst Case: 
+Comparisons = 10150304, Moves = 36378587
+Best Case: 
+Comparisons = 10539088, Moves = 36378579
+Random Case: 
+Comparisons = 21164732, Moves = 38278658
+
+Merge Sort: 
+
+
+Size: 10
+Worst Case: 
+Comparisons = 15, Moves = 68
+Best Case: 
+Comparisons = 19, Moves = 68
+Random Case: 
+Comparisons = 24, Moves = 74
+
+
+Size: 100
+Worst Case: 
+Comparisons = 316, Moves = 1344
+Best Case: 
+Comparisons = 356, Moves = 1344
+Random Case: 
+Comparisons = 573, Moves = 1478
+
+
+Size: 1000
+Worst Case: 
+Comparisons = 4932, Moves = 19952
+Best Case: 
+Comparisons = 5044, Moves = 19952
+Random Case: 
+Comparisons = 9203, Moves = 21947
+
+
+Size: 10000
+Worst Case: 
+Comparisons = 64608, Moves = 267232
+Best Case: 
+Comparisons = 69008, Moves = 267232
+Random Case: 
+Comparisons = 127325, Moves = 293955
+
+
+Size: 100000
+Worst Case: 
+Comparisons = 815024, Moves = 3337856
+Best Case: 
+Comparisons = 853904, Moves = 3337856
+Random Case: 
+Comparisons = 1621640, Moves = 3671641
+
+
+Size: 1000000
+Worst Case: 
+Comparisons = 9884992, Moves = 39902848
+Best Case: 
+Comparisons = 10066432, Moves = 39902848
+Random Case: 
+Comparisons = 19681037, Moves = 43893132
+

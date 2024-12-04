@@ -44,27 +44,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt7/cmake_install.cmake")
+  include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt11/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv1_correct/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv2/cmake_install.cmake")
+  include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt12/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Prakt8/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/malinka/CLionProjects/Algorithms/cmake-build-debug/Indiv3/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

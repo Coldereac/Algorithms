@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Indiv1.dir/main.cpp.o CMakeFiles/Indiv1.dir/CountryList/CountryList.cpp.o CMakeFiles/Indiv1.dir/handlers/menu.cpp.o -o Indiv1
